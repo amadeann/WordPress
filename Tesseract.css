@@ -47,6 +47,7 @@ Tesseract is based on Underscores http://underscores.me/, (C) 2012-2014 Automatt
     24. Plugins
     25. Responsive design
     26. Print styles
+    99. Custom elements
 */
 
 
@@ -1076,7 +1077,7 @@ input[type="button"]:active {
 .secondary-button:hover,
 .woocommerce a.button.secondary-button:hover,
 .woocommerce-page a.button.secondary-button:hover {
-    background-color: #199cd8;
+    background-color: #535353;
 }
 
 .site-header .secondary-button,
@@ -2387,6 +2388,13 @@ article.comment-body{
 #footer-button-container {
 		line-height: 120%;
 	}
+
+/* unbold the footer right banner */
+
+#footer-banner-right.designer a {
+    font-size: 11px !important;
+    font-weight: normal !important;
+}
 
 
 /* =24. Plugins
