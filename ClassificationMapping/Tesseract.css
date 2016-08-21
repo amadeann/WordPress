@@ -1063,8 +1063,8 @@ input[type="button"]:active {
 .primary-button:hover,
 .woocommerce a.button.primary-button:hover,
 .woocommerce-page a.button.primary-button:hover {
-/* AA: modify bg color from 199cd8 to 535353 */
-    background-color: #535353;
+/* AA: modify bg color from 199cd8 to 1A0315 */
+    background-color: #1A0315;
 }
 
 .secondary-button,
@@ -1077,7 +1077,7 @@ input[type="button"]:active {
 .secondary-button:hover,
 .woocommerce a.button.secondary-button:hover,
 .woocommerce-page a.button.secondary-button:hover {
-    background-color: #535353;
+    background-color: #1A0315;
 }
 
 .site-header .secondary-button,

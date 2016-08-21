@@ -1,0 +1,29 @@
+<?php
+/* Replaced the line 
+	<div id="primary" class="full-width-page">
+with
+<?php
+	$bplayout = get_theme_mod('tesseract_blog_post_layout');
+
+	switch ( $bplayout ) {
+		case 'fullwidth':
+			$primary_class = 'full-width-page no-sidebar';
+
+			break;
+		case 'sidebar-right':
+			$primary_class = 'content-area sidebar-right';
+
+			break;
+		default:
+			// sidebar-left
+			$primary_class = 'content-area';
+		}
+?>
+
+<div id="primary" class="<?php echo $primary_class; ?>">
+This was based on the guide here:
+https://wordpress.org/support/topic/sidebar-appears-below-content-in-tesseract-2-theme
+in order to repair the problem with the sidebar being displayed as full width page
+on archive pages
+*/
+?>

@@ -1,0 +1,161 @@
+/* =99. Custom Elements
+-------------------------------------------------------------- */
+
+/* Styles for elements with their own custom id */
+
+#popularMappings table {
+    table-layout: fixed;
+}
+
+#popularMappings td, th {
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight:550;
+    table-layout: fixed;
+    background: inherit;
+}
+
+/* Max Width of the drop down menu for product variations */
+
+.woocommerce div.product form.cart .variations select {
+    max-width: 400px;
+}
+
+/* Buttons */
+/* Active */
+/* Base version of the code stayed in the theme CSS file */
+/* I am hoping that Custon CSS overwrites the theme CSS file in case of conflicts */
+
+.single_add_to_cart_button .button .alt button:active,
+button:active,
+.button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+    background: none;
+    background-color: #6E3667;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.primary-button,
+.woocommerce a.button.primary-button,
+.woocommerce-page a.button.primary-button {
+/* AA: modify bg color from 199cd8 to 88D317 */
+    background-color: #88D317;
+}
+
+.primary-button,
+.secondary-button,
+.woocommerce a.button.primary-button,
+.woocommerce-page a.button.primary-button,
+.woocommerce a.button.secondary-button,
+.woocommerce-page a.button.secondary-button {
+    color: #fff!important;
+    vertical-align: baseline;
+    }
+
+.primary-button:hover,
+.woocommerce a.button.primary-button:hover,
+.woocommerce-page a.button.primary-button:hover {
+/* AA: modify bg color from 199cd8 to 1A0315 */
+    background-color: #1A0315;
+}
+
+.secondary-button,
+.woocommerce a.button.secondary-button,
+.woocommerce-page a.button.secondary-button  {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.secondary-button:hover,
+.woocommerce a.button.secondary-button:hover,
+.woocommerce-page a.button.secondary-button:hover {
+    background-color: #1A0315;
+}
+
+/* Headings color override */
+/* Headings are in the section 06. Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1A0315;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 0px;
+    margin-bottom: 6px;
+    margin-top:0px;
+    margin-left:0px;
+    margin-right: 0px;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+    color: #1A0315;
+}
+
+/* copy of the class for body elements */
+/* this was modified to change the mail color of the website */
+
+body {
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #1A0315;
+    position: relative;
+}
+
+/* links */
+
+a {
+    color: #1A0315;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #88D317;
+}
+
+/* formatting of the text on deep plum background */
+
+.text-plum-background {
+  color: #ffffff;
+}
+
+.text-plum-background a {
+  color: #ffffff;
+}
+
+.text-plum-background a:hover {
+  color: #88D317;
+}
+
+/* Solving a problem with sidebar not being displayed on post pages */
+
+.page.content-area.sidebar-right #primary { width: 66.6666%; }
+
+/* unbold the footer right banner */
+
+#footer-banner-right.designer a {
+    font-size: 11px !important;
+    font-weight: normal !important;
+}
+
+/* Fix for blurry images in Woocommerce */
+/* link to the fix is here:: https://wordpress.org/support/topic/woocommerce-product-images-blurry-and-not-fitting */
+
+.woocommerce div.product div.images,.woocommerce-page div.product div.images,.woocommerce #content div.product div.images,.woocommerce-page #content div.product div.images{width:auto;}
+
+.woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;}
+
+.woocommerce ul.products li.product,.woocommerce-page ul.products li.product{width:auto;}
