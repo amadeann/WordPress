@@ -55,7 +55,7 @@ function sdt_remove_ver_css_js( $src ) {
 
 */
 
-// Override the settind with maximum 50 product
+// Override the setting with maximum 50 product
 // variables being added at a time
 
 define( 'WC_MAX_LINKED_VARIATIONS', 150 );
@@ -68,5 +68,13 @@ Changed element:
 to hight and width 8x8. Code mofified, and not added to the end of the file as this is overwrite and not a new funciton.
 
 */
+
+/* Move the product short description below the 'add to cart' button */
+/* this was done based on the tutorial here: */
+/* http://wpbackoffice.com/reorder-product-page-contents-woocommerce/ */
+
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 60 );
 
 ?>

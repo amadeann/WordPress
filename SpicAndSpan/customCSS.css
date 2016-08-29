@@ -1,0 +1,61 @@
+/* Modifications to the Illdy theme CSS */
+
+#post-44.post-44 .blog-post-title {
+	display: none;
+}
+
+/* interesting solution for 3-column contact form */
+
+.col-3-contact-form textarea,
+.col-3-contact-form input[type="text"],
+.col-3-contact-form input[type="email"], 
+.col-3-contact-form input[type="phone"], 
+.col-3-contact-form button, 
+.col-3-contact-form input[type="submit"] {
+		width: 100%;
+	}
+
+.col-3-contact-form p {
+	position: relative;
+  	display: block;
+	float: left; 
+	width: 33%; 
+}
+
+.col-3-contact-form	p:nth-of-type(1) {
+	padding-right: 15px;
+}
+.col-3-contact-form p:nth-of-type(2) {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.col-3-contact-form p:nth-of-type(3) {
+	padding-left: 15px;
+}
+
+/* 1 column contact form */
+
+.col-1-contact-form textarea,
+.col-1-contact-form input[type="text"],
+.col-1contact-form input[type="email"], 
+.col-1contact-form input[type="phone"], 
+.col-1contact-form button, 
+.col-1contact-form input[type="submit"] {
+		width: 100%;
+	}
+
+/* keep the bullet points in unordered list centered */
+
+ul {
+    list-style-position: inside;
+}
+
+/* reduce the bottom margin of the 'About' section */
+
+#about .section-header {
+		margin-bottom: 65px;
+	}
+
+#about {
+		padding-bottom: 0px;
+	}

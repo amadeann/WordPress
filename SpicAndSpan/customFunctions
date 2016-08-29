@@ -1,0 +1,70 @@
+<?php
+
+/* This file contains all the modifications I did in the php files */
+
+/* 1. MODIFICATION 1 */
+
+/* Allowing more custom tags in the 'sections' (e.g. about sections) */
+/* By default this option is locked */
+/* I modified the function illdy_sanitize_html sitting in the file: */
+/* /spicandspan/wp-content/themes/illdy/inc/customizer*/
+
+if( !function_exists( 'illdy_sanitize_html' ) ) {
+
+    function illdy_sanitize_html( $input ) {
+
+        $input = force_balance_tags( $input );
+
+        
+
+        $allowed_html = array(
+
+            'a' => array(
+
+                'href' => array(),
+
+                'title' => array()
+
+            ),
+
+            // This is the part I modified
+
+            'ul' => array(
+
+                'class' => array()
+
+            ),
+
+            'br' => array(),
+
+            'em' => array(),
+
+            'img' => array(
+
+                'alt' => array(),
+
+                'src' => array(),
+
+                'srcset' => array(),
+
+                'title' => array()
+
+            ),
+
+            'li' => array(),
+
+            'p' => array(),
+
+            'strong' => array(),
+
+        );
+
+        $output = wp_kses( $input, $allowed_html );
+
+        return $output;
+
+    }
+
+}
+
+?>
