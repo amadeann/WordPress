@@ -37,6 +37,18 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 
             'br' => array(),
 
+            // This is the part I modified
+
+            'div' => array(
+
+                'class' => array(),
+
+                'id' => array(),
+
+                'style' => array()
+
+            ),
+
             'em' => array(),
 
             'img' => array(
@@ -55,6 +67,14 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 
             'p' => array(),
 
+            'span' => array(
+
+                    'class' => array(),
+
+                    'style' => array()
+
+                ),
+
             'strong' => array(),
 
         );
@@ -67,4 +87,11 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 
 }
 
+/* Removing the copyright message in the footer */
+/* The following fragment has to be removed from the footer.php file:
+<span data-customizer="copyright-credit"><?php printf( '%s <a href="%s" title="%s" target="_blank">%s</a>.', __( 'Theme:', 'illdy' ), esc_url( 'http://colorlib.com/wp/themes/illdy' ), __( 'Illdy', 'illdy' ), __( 'Illdy', 'illdy' ) ); ?></span>
+*/
+
 ?>
+
+
