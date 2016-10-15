@@ -159,3 +159,91 @@ a:hover {
 .woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;}
 
 .woocommerce ul.products li.product,.woocommerce-page ul.products li.product{width:auto;}
+
+/* Fix the issue with product images not being aligned in the store */
+
+.woocommerce ul.products li.product a img {
+    width: auto;
+}
+
+/* Customize the recent post excerpts on front-page */
+
+.display-posts-listing .listing-item {
+    clear: both;
+}
+
+.display-posts-listing img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.listing-item .excerpt-dash {
+    display: none;
+}
+
+/* Styles for the product displayed in the store */
+
+div.panel.store-product-3 {
+    text-align:center;
+    padding: 2em; 
+    border: 2px solid #6E3667 ;
+    max-width: 333px;
+}
+
+.store-product-3 h2 {
+    font-weight:600;
+}
+
+.store-product-3 hr {
+    margin: 2.11111rem 35%;
+}
+
+h4.store-product-3.price {
+    font-size:3em; color:#535353;
+}
+
+div.panel.store-product-3-featured {
+    border: 5px solid #6E3667 ;
+}
+
+sup.store-product-3 {
+    top: 1em;
+    font-size: 0.4em;
+    vertical-align: top;
+}
+
+sub.store-product-3 {
+    bottom: 0em;
+    font-size: 0.4em;
+}
+
+a.button.store-product-3-featured {
+    background-color: #88D317;
+    color: #FFFFFF;
+}
+
+a.button.store-product-3-featured:hover {
+    background-color: #1A0315 ;
+    color: #FFFFFF;
+}
+
+/* Move the product description to the left */
+
+div.summary.entry-summary {
+    float: left!important;
+    width:auto!important;
+    max-width: 80%!important;
+}
+
+/* Resolve the conflict with bootstrap classes - inherit the font color from body */
+
+td.label {
+    color: inherit;
+}
+
+/* Float payment method icons */
+
+ul.payment-methods.payment-methods-default {
+    float:left;
+}

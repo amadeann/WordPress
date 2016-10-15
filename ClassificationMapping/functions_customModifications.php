@@ -28,7 +28,7 @@ add_filter( 'wc_product_sku_enabled', '__return_false' );
 
 // Remove breadcrumb - that small path displayed at the top of the product page (e.g. "Home / Classification Mapping")
 
-remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+remove_action( 'woocommerce_before_main_content','cc', 20, 0);
 
 
 // Remove "has been added to your cart" mesasge
@@ -76,5 +76,32 @@ to hight and width 8x8. Code mofified, and not added to the end of the file as t
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 60 );
+
+/* Making the 'order completed' page PayPal-compliant */
+
+function paypal_order_received_text( $text, $order_id ) {
+	$order = new WC_Order($order_id);
+	$payment_method = get_post_meta( $order->id, '_payment_method', true );
+	switch ($payment_method) {
+    	case 'bacs':
+    		return $text.'<br /><br />';
+    		break;
+    	case paypal;
+    		$new = 'Thank you for your payment. Your transaction has been completed, and a receipt for your purchase has been emailed to you. You may log into your account at <a href = "www.paypal.com/ee">www.paypal.com/ee</a> to view details of this transaction.<br /><br />';
+    		return $new;
+    		break;
+    }
+}
+add_filter('woocommerce_thankyou_order_received_text', 'paypal_order_received_text', 10, 2 );
+
+/* Modification !!! */
+/* The following fragment of the code has been commented out in functions.php in order to fix the problem with Google Fonts */
+/* wp_enqueue_style( 'tesseract-fonts', tesseract_fonts_url(), array(), '1.0.0' ); */
+/* This was commented out withing a tesseract_scripts() function */
+
+/* Remove image on product pages */
+
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
 
 ?>

@@ -51,6 +51,14 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 
             'em' => array(),
 
+            'i' => array(
+
+                    'class' => array(),
+
+                    'style' => array()
+
+                ),            
+
             'img' => array(
 
                 'alt' => array(),
@@ -65,7 +73,13 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 
             'li' => array(),
 
-            'p' => array(),
+            'p' => array(
+
+                    'class' => array(),
+
+                    'style' => array()
+
+                ),
 
             'span' => array(
 
@@ -91,6 +105,9 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 /* The following fragment has to be removed from the footer.php file:
 <span data-customizer="copyright-credit"><?php printf( '%s <a href="%s" title="%s" target="_blank">%s</a>.', __( 'Theme:', 'illdy' ), esc_url( 'http://colorlib.com/wp/themes/illdy' ), __( 'Illdy', 'illdy' ), __( 'Illdy', 'illdy' ) ); ?></span>
 */
+
+
+/* Reordered the elements in the contact section file, so that the contact details are below the order form */
 
 ?>
 

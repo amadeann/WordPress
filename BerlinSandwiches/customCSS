@@ -1,0 +1,39 @@
+/* Hide default header */
+
+header.site-header#masthead {
+    display: none !important;
+}
+
+/* Hide default footer 
+footer.site-footer#colophon {
+    display: none !important;
+}
+
+*/
+
+/* Change the sumbit button background on forms*/
+
+input.wpcf7-form-control.wpcf7-submit {
+	background-color: #000000;
+}
+
+input.wpcf7-form-control.wpcf7-submit:hover {
+	background-color: #88D317;
+}
+
+/* Modify default link colors */
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	color: #88D317;
+}
+
+/* Mofidy the size of footer designer message */
+
+#footer-banner-right.designer a {
+    font-size: 10px!important;
+    font-weight: normal!important;
+}
