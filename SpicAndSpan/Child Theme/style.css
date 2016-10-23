@@ -19,3 +19,165 @@ Tags: blog, e-commerce, education, entertainment, news, food-and-drink, holiday,
 Text Domain: illdy-spicandspan
 
 */
+
+/* Modifications to the Illdy theme CSS */
+
+#post-44.post-44 .blog-post-title {
+	display: none;
+}
+
+/* interesting solution for 3-column contact form */
+
+.col-3-contact-form textarea,
+.col-3-contact-form input[type="text"],
+.col-3-contact-form input[type="email"], 
+.col-3-contact-form input[type="phone"], 
+.col-3-contact-form button, 
+.col-3-contact-form input[type="submit"] {
+		width: 100%;
+	}
+
+.col-3-contact-form p {
+	position: relative;
+  	display: block;
+	float: left; 
+	width: 33%; 
+	padding-top: 20px;
+}
+
+.col-3-contact-form	p:nth-of-type(1) {
+	padding-right: 15px;
+}
+.col-3-contact-form p:nth-of-type(2) {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.col-3-contact-form p:nth-of-type(3) {
+	padding-left: 15px;
+}
+
+/* 1 column contact form */
+
+.col-1-contact-form textarea,
+.col-1-contact-form input[type="text"],
+.col-1contact-form input[type="email"], 
+.col-1contact-form input[type="phone"], 
+.col-1contact-form button, 
+.col-1contact-form input[type="submit"] {
+		width: 100%;
+	}
+
+/* keep the bullet points in unordered list centered */
+
+ul {
+    list-style-position: inside;
+    padding-left: 0px;
+}
+
+/* reduce the bottom margin of the 'About' section */
+
+#about .section-header {
+		margin-bottom: 65px;
+	}
+
+#about {
+		padding-bottom: 0px;
+	}
+
+/* Size of prices in - it is the same size as in Mikasa woocommerce store: http://mikasasports.com/shop/soccer/mc5-wbk/*/
+
+p.price {
+	font-size: 1.88em;
+}
+
+/* Prevent telephone number from being split into multiple lines */
+
+span.telephone {
+	white-space: nowrap;
+}
+
+/* Keep the list with team attributes floating (wrapping div centers it), but the contents left aligned  */
+
+#team-bullet-list {
+	display: inline-block;
+	text-align: left;
+}
+
+/* Style h2 headers in a similar manner to section headers */
+
+h2.front-page-section-subheader {
+  margin: 30px 0 30px 0;
+  line-height: 1;
+  font-weight: 900;
+  font-size: 24px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Format each occurance of Spic And Span */
+
+.spic-and-span-text {
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+/* Change the color after the dot */
+
+.spic-and-span-text-after-dot {
+	color: #ffde00;
+}
+
+/* Adjust the color of drop down menus in contact form to be consistent with other fields */
+
+select.wpcf7-form-control.wpcf7-select {
+	background-color: #df955b;
+    border: 1px solid #d08b55;
+}
+
+/* Adjust the color of date in contact form to be consistent with other fields */
+
+input.wpcf7-form-control.wpcf7-date.wpcf7-validates-as-date {
+	background-color: #df955b;
+    border: 1px solid #d08b55;
+}
+
+/* Links do not have the default color, but import it from the parent element. 
+Effectively it means, that they are not blue anymore. */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* fix the problem with line-height on front page headers */
+.front-page-section .section-header h3 {
+	line-height: 1;
+}
+
+/* Hide page titles from statuc pages (the ones with cleaning packages) */
+/* Solution is taken from here: https://colorlib.com/wp/forums/topic/hide-specific-page-title/ */;
+
+.no-title #post-title {
+	display: none;
+}
+
+/* center the content on the product pages */
+
+div.product-page {
+	text-align: center;
+}
+
+/* Fix the problem with alignment to bottom in services section */
+
+.inline-columns > div {
+	float: left;
+}
+
+/* Highlight text */
+
+.highlight-sas-yellow {
+	color: #000000;
+	background-color: #f1d204;
+} 
