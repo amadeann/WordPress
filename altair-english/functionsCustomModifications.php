@@ -9,7 +9,7 @@
  ** to **
 
 
-  $default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'ample' ), date( 'Y' ), $site_link ).;
+  $default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'ample' ), date( 'Y' ), $site_link );
 
   ** this was done in order to remove theme information **
 

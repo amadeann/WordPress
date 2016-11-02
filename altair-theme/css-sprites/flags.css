@@ -6,6 +6,8 @@
     display: inline-block;
     width: 16px;
     height: 11px;
+    vertical-align: middle;
+    margin-bottom: 0px;
     background: url('https://s3.eu-central-1.amazonaws.com/altair-seatcovers/css-sprites/flags.png') no-repeat;
 }
 

@@ -18,3 +18,134 @@ Text Domain: altair
 
 */
 
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+
+/*
+====> 3.3 Lists
+--------------------------------------------------------------*/
+
+.no-bullets ul {
+  list-style: none;
+}
+
+/*--------------------------------------------------------------
+4.0 Forms <- Default styles are overwritten here
+--------------------------------------------------------------*/
+/* AA: I modified it, so that other input fields, such as tel work fine */ 
+input, textarea {
+   -webkit-border-radius: 0px;
+}
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="password"],
+textarea {
+   -moz-appearance: none !important;
+   -webkit-appearance: none !important;
+   appearance: none !important;
+   padding: 1%;
+   border: 1px solid #f2f2f2;
+   line-height: 20px;
+   width: 98%;
+   margin: 0 0 30px;
+   background-color: #f8f8f8;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+   border: 1px solid #eaeaea;
+}
+/* AA: Style 'select' field */
+select.wpcf7-select {
+   -moz-appearance: none !important;
+   /* -webkit-appearance: none !important;
+   appearance: none !important; */
+   padding: 1%;
+   border: 1px solid #f2f2f2;
+   line-height: 20px;
+   width: 98%;
+   margin: 0 0 30px;
+   background-color: #f8f8f8;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+}
+
+select.wpcf7-select:focus {
+   border: 1px solid #eaeaea;
+}
+
+/* AA: End of tyle 'select' field */
+input.s {
+   width: 60%;
+   padding: 4px 54px 4px 10px;
+   height: 36px;
+   color: #666666;
+   background-color: #ffffff;
+   margin: 0;
+   border: 1px solid #f2f2f2;
+}
+input.s:focus {
+   padding-left: 10px;
+   border-color: #eaeaea;
+   text-indent: 0;
+}
+.ample-button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+button {
+   -moz-appearance: none !important;
+   -webkit-appearance: none !important;
+   appearance: none !important;
+   color: #FFFFFF;
+   display:inline-block;
+   margin-bottom: 30px;
+   padding: 5px 25px;
+   cursor: pointer;
+   background-color: #80abc8;
+   border: 0px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   font-size: 16px;
+}
+.ample-button:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover {
+   -webkit-box-shadow:0 0 2px rgba(0, 0, 0, 0.6);
+   -moz-box-shadow:0 0 2px rgba(0, 0, 0, 0.6);
+   box-shadow:0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Remove the bottom margin from images in forms */
+
+img.form-gallery {
+	margin-bottom: 0px;
+}
+
+/*--------------------------------------------------------------
+99.0 Other changes
+--------------------------------------------------------------*/
+
+/* Change the pagging of items in the menu */
+
+.main-navigation li {
+   float: left;
+   position: relative;
+   padding: 0 12px;
+}
+
