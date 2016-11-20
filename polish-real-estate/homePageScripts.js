@@ -12,7 +12,7 @@ jQuery('div.slide[style~="background-image:url(http://www.polish-real-estate.com
 
 // Linkify the zoner headers
 
-jQuery('div.slide[style~="background-image:url(http://www.polish-real-estate.com/wp-content/uploads/2015/09/Warsaw-center-free-license-CC0-2.jpg);"] .overlay > .container > .info > h3').wrap('<a href="/invest"></a>');
+jQuery('div.slide[style~="background-image:url(http://www.polish-real-estate.com/wp-content/uploads/2015/09/Warsaw-center-free-license-CC0-2.jpg);"] .overlay > .container > .info > h3').wrap('<a href="/services"></a>');
 jQuery('div.slide[style~="background-image:url(http://www.polish-real-estate.com/wp-content/uploads/2016/10/Office.jpeg);"] .overlay > .container > .info > h3').wrap('<a href="/office-real-estate"></a>');
 jQuery('div.slide[style~="background-image:url(http://www.polish-real-estate.com/wp-content/uploads/2016/10/Retail.jpg);"] .overlay > .container > .info > h3').wrap('<a href="/retail-real-estate"></a>');
 jQuery('div.slide[style~="background-image:url(http://www.polish-real-estate.com/wp-content/uploads/2016/10/Industrial.jpg);"] .overlay > .container > .info > h3').wrap('<a href="/industrial-real-estate"></a>');
