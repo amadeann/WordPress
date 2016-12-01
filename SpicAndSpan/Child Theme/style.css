@@ -181,3 +181,27 @@ div.product-page {
 	color: #000000;
 	background-color: #f1d204;
 } 
+
+/* Add the shopping cart icon before 'Your cart' title for cart widget 
+Solution from:
+http://stackoverflow.com/questions/14736496/use-font-awesome-icons-in-css
+*/
+
+.woocommerce.widget_shopping_cart h3 {
+    position:relative;
+}    
+.woocommerce.widget_shopping_cart h3:before {
+    content: "\f07a";
+    font-family: FontAwesome;
+    left:-10px;
+    position:relative;
+    font-size: 2em;
+ }
+
+ span.telephone, span.email {
+ 	font-weight: bold;
+ }
+
+ div.store-welcome-message {
+ 	margin-bottom: 50px;
+ } 
