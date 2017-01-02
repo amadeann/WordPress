@@ -28,6 +28,14 @@ jQuery(document).ready(function($) {
 		}).css("font-weight","bold");
 });
 
+/* Bold the 'Order Now' link in the main menu */
+
+jQuery(document).ready(function($) {
+	jQuery("ul#menu-header-menu > li > a").filter(function() {
+		    return jQuery(this).text() === "Order Now";
+		}).css("font-weight","bold");
+});
+
 /* Replace the site title with the image */ 
 
 jQuery(document).ready(function($) {

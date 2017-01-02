@@ -48,7 +48,7 @@ if ( ! function_exists( 'woocommerce_content_illdy' ) ) {
 		} else { ?>
 			<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 			<?php 
-				// On initial store page display custom title. On other page display the title using woocommerce_page_title() function
+				// On the initial store page display custom title. On other page display the title using woocommerce_page_title() function
 			?> 
 				<h1 class="page-title"><?php 
 					if (is_product_archive_page()) {
@@ -58,6 +58,7 @@ if ( ! function_exists( 'woocommerce_content_illdy' ) ) {
 					}
 				?></h1>
 			<?php endif; ?>
+			<?php // AA: store_welcome_message() from functions.php is hooked to the hook below ?>
 			<?php (is_product_archive_page() ? do_action( 'woocommerce_archive_description') : false); ?>
 			<?php if ( have_posts() ) : ?>
 				<?php do_action( 'woocommerce_before_shop_loop' );?>
@@ -77,7 +78,7 @@ if ( ! function_exists( 'woocommerce_content_illdy' ) ) {
 
 ?>
 
-
+<!-- Proper layout of the page starts here-->
 
 <?php get_header(); ?>
 <div class="container">
@@ -98,7 +99,7 @@ if ( ! function_exists( 'woocommerce_content_illdy' ) ) {
 				<div id="sidebar">
 					<?php
 					$the_widget_title = array(
-						// AA: add the widget name ass class name
+						// AA: add the widget name as class name
 						// AA: this is based on the fact that the_widget() function uses sprintf with $widget_obj->widget_options['classname'] as argument
 						'before_widget'	=> '<div class="widget %s">',
 						'after_widget'	=> '</div>',

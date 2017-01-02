@@ -28,7 +28,8 @@ if ( ! function_exists( 'illdy_enqueue_stylesheets' ) ) {
 		wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/layout/css/owl-carousel.min.css', array(), '2.0.0', 'all' );
 		wp_enqueue_style( 'illdy-main', get_template_directory_uri() . '/layout/css/main.css', array(), '', 'all' );
 		wp_enqueue_style( 'illdy-custom', get_template_directory_uri() . '/layout/css/custom.min.css', array(), '', 'all' );
-		wp_enqueue_style( 'illdy-style', get_stylesheet_uri(), array(), '1.0.16', 'all' );
+        // AA: Enqueue the child theme styles after the parent theme 
+		wp_enqueue_style( 'illdy-style', get_stylesheet_uri(), array('parent-style'), '1.0.16', 'all' );
 	}
 }
 
@@ -39,6 +40,22 @@ function enqueue_parent_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
 
+/**
+
+ *    WP Enqueue JavaScripts
+    Dequeue the layout/js/scripts.js file to get rid of the problem with smoothScrollAnchors function. Function was breaking my collapsible services section.
+    I had to modify a selector in this function, not to call a function on click on #collapsibleServices link
+
+ */
+
+// Notice, that very low prio (100) is set here. This will make sure that the troublesome script is dequed
+add_action('wp_enqueue_scripts', 'layout_js_scripts_fix', 100);
+function layout_js_scripts_fix()
+{
+    wp_dequeue_script('illdy-scripts');
+    wp_enqueue_script('illdy-scripts-fixed', get_stylesheet_directory_uri().'/layout/js/scripts.min.js', array('jquery'));
+}
+
 /* Allow more HTML tags in sections */
 
 if( !function_exists( 'illdy_sanitize_html' ) ) {
@@ -47,7 +64,7 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 
         $input = force_balance_tags( $input );
 
-        
+
 
         $allowed_html = array(
 
@@ -91,7 +108,7 @@ if( !function_exists( 'illdy_sanitize_html' ) ) {
 
                     'style' => array()
 
-                ),            
+                ),
 
             'img' => array(
 
@@ -141,8 +158,8 @@ function add_jQueryScriptsSpicAndSpan() {
     wp_register_script('jQueryScriptsSpicAndSpan', get_stylesheet_directory_uri() . '/jQuery/jQuerySpicAndSpan.js', array('jquery'),'', true);
     wp_enqueue_script('jQueryScriptsSpicAndSpan');
 }
- 
-add_action( 'wp_enqueue_scripts', 'add_jQueryScriptsSpicAndSpan' ); 
+
+add_action( 'wp_enqueue_scripts', 'add_jQueryScriptsSpicAndSpan' );
 
 /* Remove query strings from scripts to speed up the site */
 /* This is a recommendation from: https://www.sourcewp.com/remove-query-strings-static-resources/ */
@@ -161,7 +178,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 * is_realy_woocommerce_page - Returns true if on a page which uses WooCommerce templates (cart and checkout are standard pages with shortcodes and which are also included)
 */
 
-/* I am not sure why I don't have to use add_action, but my hunch is that I am just defining a function here and not using it 
+/* I am not sure why I don't have to use add_action, but my hunch is that I am just defining a function here and not using it
 It's completely different to the case when I am enquing scripts or sth like that
 function is used in header.php */
 
@@ -237,7 +254,7 @@ function is_really_woocommerce () {
     }
 
 /* AA: Store welcome message
-Priority is set to 10 to ensure that the function is executed before the product count and sorting menu 
+Priority is set to 10 to ensure that the function is executed before the product count and sorting menu
 */
 
     add_action( 'woocommerce_archive_description', 'store_welcome_message', 10 );
@@ -247,3 +264,75 @@ Priority is set to 10 to ensure that the function is executed before the product
         $welcome_message = '<div class="store-welcome-message"><p>We search every day through thousands of offers available in the market and pick the best ones for you. All products featured in our <span class="spic-and-span-text">STORE<span class="spic-and-span-text-after-dot">.</span></span> have been tested and are used by our cleaning teams on a regular basis. We guarantee you 100% satisfaction with these products.</p><p>There are no delivery costs for our regular customers. If you are not our customer yet, a flat rate for delivery is €10 within Germany and €20 outside Germany.</p><p>Have you got any additional questions? Would you like to know more about our featured products? Please, call us at <span class="telephone"><a href="tel:+49 174 130 45 02">+49 174 130 45 02</a></span> or write to us at <span class="email"><a href="mailto:info@spicandspan.de" title="info@spicandspan.de">info@spicandspan.de</a></span>. Our Customer Support Team is available 24 hours a day, 7 days a week.</p></div>';
         echo $welcome_message;
     }
+
+    /*
+    AA: Store closing message
+    Displays below the lower page navigation on product archive pages
+     */
+
+    add_action( 'woocommerce_after_shop_loop', 'store_closing_message', 20 );
+
+    function store_closing_message() {
+
+        $closing_message = '<div class="store-closing-message"><p>Did not find what you are looking for? No worries. <a href="tel:+491741304502">Call us</a> or <a href="/#contact-us">write to us</a> and let us know what you are looking for. We will select the best products and deliver to you right away!</p></div>';
+
+        echo $closing_message;
+
+    }
+/* AA: fallback for browsers not supporting date field in the contact form (e.g. Firefox and Safari)
+solution from:
+http://contactform7.com/faq/does-contact-form-7-support-html5-input-types/ */
+
+    add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
+
+/*
+AA: Hook breadcrumbs on product pages and archive pages
+Priority is set to 5 to display breadcrumbs before the images
+*/
+
+add_action( 'woocommerce_before_single_product_summary', 'product_page_breadcrumbs', 5 );
+add_action( 'woocommerce_before_shop_loop', 'product_page_breadcrumbs', 5 );
+
+function product_page_breadcrumbs() {
+    woocommerce_breadcrumb();
+}
+
+/*
+AA: Change the 'Home' text in breadcrumbs to 'Spic And Span Store'
+Based on solution from: https://docs.woocommerce.com/document/customise-the-woocommerce-breadcrumb/
+*/
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
+function jk_change_breadcrumb_home_text( $defaults ) {
+    $defaults['home'] = 'Spic And Span Store';
+    return $defaults;
+}
+
+/*
+AA: Change the Home Url from mail page Url to store Url
+I don't like hardcoding it, as it may cause problems when we implement https
+Based on solution from: https://docs.woocommerce.com/document/customise-the-woocommerce-breadcrumb/
+*/
+
+add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+function woo_custom_breadrumb_home_url() {
+    return 'http://www.spicandspan.de/store';
+}
+
+/*
+
+AA: Register new sidebar - services hidden in the collapsible menu
+
+*/
+
+// Collapsible Services Sidebar
+
+register_sidebar( array(
+    'name'          => __( 'Front page - Collapsible Services Sidebar', 'illdy' ),
+    'id'            => 'front-page-collapsible-services-sidebar',
+    'description'   => __( 'The widgets added in this sidebar will appear in services section from front page. Widgets are by default collapsed', 'illdy' ),
+    'before_widget' => '<div id="%1$s" class="col-sm-4 %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '',
+    'after_title'   => '',
+) );

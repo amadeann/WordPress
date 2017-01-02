@@ -2,26 +2,26 @@
 <div class="container-fluid">
 	<div class="row" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-12">
-		<h2>1. Wählen Sie Ihre Sitzbezüge</h2>
+		<h2>1. Choose your seat covers</h2>
 		</div>
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-4">
-			<label for="car-brands-1">Auto-Marke</label>
+			<label for="car-brands-1">Car brand</label>
 			[select car-brands-drop-down id:car-brands-1]
 		</div>
 		<div class="col-md-4">
-			<label for="car-models-1">Automodell</label>
+			<label for="car-models-1">Car model</label>
 			[select car-model-drop-down id:car-models-1 include_blank]
 		</div>
 		<div class="col-md-4">
-			<label for="car-model-year-1">Herstellungsjahr</label>
-			[select car-model-year-drop-down id:car-models-year-1 include_blank "2016" "2015" "2014" "2013" "2012" "2011" "2010" "2009" "2008" "2007" "2006" "2005" "2004" "2003" "2002" "2001" "2000" "1999" "1998" "1997" "1996" "1995" "1994" "1993" "1992" "1991" "1990" "ältere Autos"]
+			<label for="car-model-year-1">Production Year</label>
+			[select car-model-year-drop-down id:car-models-year-1 include_blank "2016" "2015" "2014" "2013" "2012" "2011" "2010" "2009" "2008" "2007" "2006" "2005" "2004" "2003" "2002" "2001" "2000" "1999" "1998" "1997" "1996" "1995" "1994" "1993" "1992" "1991" "1990" "older cars"]
 		</div>
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-4">
-			<label for="main-fabrics-1">Wählen Sie Ihren Hauptstoff (Farbe)</label>
+			<label for="main-fabrics-1">Choose your main fabric (color)</label>
 			<div>
 				[select main-fabrics-drop-down id:main-fabrics-selector-1 include_blank "H.1" "H.2" "H.3" "H.4" "H.5" "H.6" "H.7" "H.8" "H.9" "H.10" "H.11" "H.12" "H.13" "H.14" "H.15" "H.16" "H.16" "H.17" "H.18" "H.19"]
 			</div>
@@ -60,7 +60,7 @@
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-4">
-			<label for="side-fabrics-1">Wählen Sie Ihren Nebenstoff (Seiten, Besatz und Kopfstützen):</label>
+			<label for="side-fabrics-1">Choose your side fabric (sides, seats und headrests):</label>
 			<div>
 				[select side-fabrics-drop-down id:side-fabrics-selector-1 include_blank "N.1" "N.2"]
 			</div>
@@ -86,7 +86,7 @@
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-4">
-			<label for="doors-number-selector-1">Auto-Türe:</label>
+			<label for="doors-number-selector-1">Doors:</label>
 			<div>
 				[select doors-number-drop-down id:doors-number-selector-1 include_blank "2" "3" "4" "5" "6" "Andere"]
 			</div>
@@ -98,20 +98,21 @@
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-12">
-			<label for="message-field-1">Weitere Bemerkungen und besondere Merkmale</label>
-			<p>(Bei Bestellung bitte angeben: z.B. Armlehne, Armstütze, Luftkissen, Airbag, Seitenairbag, Hinter Sitzbank geteilt, Hinter Sitzbank voll, etc.) </p>
+			<label for="message-field-1">Other remarks and special features</label>
+			<p>(Please specify in the form below: armrests, arm support, airbags, side airbags, divided back sit, full back seat, etc.) </p>
     		<div style="display:block;">[textarea your-message id:message-field-1]</div>
 		</div>
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-12">
-			<label for="front-seat-picture-1"> Laden Sie die Fotos Ihrer Autositze hoch.</label>
-			<p id="photo-upload-description-1">Der schnellste Weg für uns, um das spezifische Auto-Modell zu identifizieren ist, wenn Sie die Bilder von Ihrem Vordersitze und Rücksitze hochladen. Im Laufe der Jahre haben wir Zehntausende von Sitzbezügen gefertigt. Ein Blick auf die Bilder und wir werden genau die Maße Ihrer Sitze kennen. Bilder, die mit Ihrem Handy aufgenommen wurden, sind völlig in Ordnung. Sie müssen diesen Schritt nicht durchführen, um eine Anfrage zu bestellen. Es ist okay, die Bilder zu einem späteren Zeitpunkt zu schicken.</p>
+			<label for="front-seat-picture-1"> Upload the photos of your car seats.</label>
+			<p id="photo-upload-description-1">
+			The fastes way for us to identify the specific car model is when you upload the pictures of your fron and back car seats. Thoughout the years we have manufactured tens of thousands of car seat covers. One look at the pictures and we will know exactly the measures of the seat covers for your car. Pictures taken with your cell phone are perfectly fine. You do not have to complete this step to submit a request for quotation. It is alright if you send us the pictures later.</p>
 		</div>
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-6">
-			<label for="front-seat-picture-1"> Vordersitze Bild</label>
+			<label for="front-seat-picture-1"> Front seat picture</label>
     		<div style="display:block;">[file front-seat-picture-field limit:4mb filetypes:png|jpg id:front-seat-picture-1]</div>
 		</div>
 		<div class="col-md-6">
@@ -122,22 +123,22 @@
 	<hr />
 	<div class="row" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-12">
-		<h2>2. Lieferadresse</h2>
+		<h2>2. Delivery address</h2>
 		</div>
 	</div>
 	<div class="row order-form" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-6">
-			<label> Ihr Name (Pflichtfeld)
+			<label> Your name (required)
     [text* your-name] </label>
 		</div>
 		<div class="col-md-6">
-			<label> Unternehmen/Firma
+			<label> Company
 			[text company-name-field] </label>
 		</div>
 	</div>
 	<div class="row" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-6">
-			<label> Ihre E-Mail-Adresse (Pflichtfeld)
+			<label> E-mail (required)
     		[email* your-email] </label>
 		</div>
 		<div class="col-md-6">
@@ -147,42 +148,42 @@
 	</div>
 	<div class="row" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-6">
-			<label> Straße
+			<label> Street
 			[text street-name-field] </label>
 		</div>
 		<div class="col-md-6">
-			<label> Haus-/Wohnungsnummer
+			<label> House/apartment number
 			[text house-number-field] </label>
 		</div>
 	</div>
 	<div class="row" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-4">
-			<label> Stadt
+			<label> City
 			[text city-field] </label>
 		</div>
 		<div class="col-md-4">
-			<label> Postleizahl
+			<label> Zip-code
 			[text zip-code-field] </label>
 		</div>
 		<div class="col-md-4">
-			<label> Staat
+			<label> Country
 			[text country-field] </label>
 		</div>
 	</div>
 	<div class="row" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-12" style="text-align:right;">
-			[submit "Jetzt anfragen"]
+			[submit "Get free quotation"]
 		</div>
 	</div>
 	<div class="row" style="margin-left:0px;margin-right:0px;">
 		<div class="col-md-12">
 			<p style="text-align:center">
-			Sichere Zahlungsmethoden.
+			Secure payment methods.
 			</p>
 			<p class="credit-card-icons" style="text-align:center">
 			</p>
 			<p style="text-align:center;">
-				Nach der Auftragsabwicklung erhalten Sie einen kompletten Preisvoranschlag. Nach der Bestätigung der Bestellung von Ihr wird eine Zahlungsaufforderung über PayPal generiert. Die Zahlung kann mit PayPal und allen gängigen Kredit-und Debitkarten, wie Visa, Mastercard, Maestro oder American Express bezahlt werden.
+				After sumbmitting an order you will receive a complete quotation. When you accept our offer, we will send you an order confirmation and a payment request via PayPal. The payment can be completed with PayPal and all major credit and debit cards such as Visa, Mastercard, Maestro or American Express.
 			</p>
 		</div>
 	</div>

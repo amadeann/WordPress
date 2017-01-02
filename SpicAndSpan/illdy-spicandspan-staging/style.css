@@ -205,3 +205,29 @@ http://stackoverflow.com/questions/14736496/use-font-awesome-icons-in-css
  div.store-welcome-message {
  	margin-bottom: 50px;
  } 
+
+ div.store-closing-message {
+ 	margin-top: 30px;
+ 	display: block;
+ } 
+
+/* Change the line-height of widget title to align it to the top (be in line with the product archive title 
+Changes are only applied to large screens*/
+
+@media screen and (min-width: 768px) {
+	.widget.woocommerce.widget_shopping_cart .widget-title h3 {
+	line-height: 1.4;
+ 	}
+ 	/* On larget sceens 'pull' the shopping cart icon to the top */
+ 	.woocommerce.widget_shopping_cart h3:before {
+ 		top:-10px;
+ 		vertical-align: text-top; /* making sure that top of the cart is alignedd with the top of the text*/
+ 	}
+
+}
+
+/* Increase the padding between the archive (product) filters and product icons */
+
+.woocommerce .products ul, .woocommerce ul.products  {
+	padding-top:2em;
+}

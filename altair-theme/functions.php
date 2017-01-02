@@ -24,7 +24,8 @@ function enqueue_other_styles() {
 add_action( 'wp_enqueue_scripts', 'add_scripts_altair' ); 
 
 function add_scripts_altair() {
-  wp_enqueue_script( 'scrollbox', get_stylesheet_directory_uri() . '/jQuery/jquery.scrollbox.js', array( 'jquery' ));
+ // AA: The scrollbox script is not needed anymore. Remove by end of Jan 2017 if nothing breaks until then
+ // wp_enqueue_script( 'scrollbox', get_stylesheet_directory_uri() . '/jQuery/jquery.scrollbox.js', array( 'jquery' ));
   wp_enqueue_script( 'flexisel', get_stylesheet_directory_uri() . '/jQuery/flexisel/jquery.flexisel.js', array( 'jquery' ));
 	wp_enqueue_script('jQueryScriptsAltair', get_stylesheet_directory_uri() . '/jQueryAltair.js', array('flexisel'));
 	wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ));
