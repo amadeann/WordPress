@@ -53,7 +53,7 @@ add_action('wp_enqueue_scripts', 'layout_js_scripts_fix', 100);
 function layout_js_scripts_fix()
 {
     wp_dequeue_script('illdy-scripts');
-    wp_enqueue_script('illdy-scripts-fixed', get_stylesheet_directory_uri().'/layout/js/scripts.min.js', array('jquery'));
+    wp_enqueue_script('illdy-scripts-fixed', get_stylesheet_directory_uri().'/layout/js/scripts.js', array('jquery'));
 }
 
 /* Allow more HTML tags in sections */

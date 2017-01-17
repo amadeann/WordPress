@@ -63,6 +63,10 @@ if ( ( is_single() || is_page() || is_archive() ) && get_theme_mod( 'illdy_archi
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php
+	// AA: GTM Script implementation
+	if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); }
+?>
 <?php if ( $preloader_enable == 1 ): ?>
 	<div class="pace-overlay"></div>
 <?php endif; ?>

@@ -231,3 +231,9 @@ Changes are only applied to large screens*/
 .woocommerce .products ul, .woocommerce ul.products  {
 	padding-top:2em;
 }
+
+/* Change the default font color of the 'Other Packages' text */
+
+.collapsibleServices {
+	color: #000000;
+}

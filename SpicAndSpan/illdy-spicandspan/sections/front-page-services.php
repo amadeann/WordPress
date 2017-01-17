@@ -127,7 +127,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 			<div class="row">
 				<!-- Very interestingly, for this to work I had to modify the smoothScrollAnchors() function -->
 				<!-- in layout/js/scripts.js file, not to listen on cliks with #collapsibleServices href -->
-			    <h2><a data-toggle="collapse" href="#collapsibleServices">Other packages...</a></h2>
+			    <h2 class="collapsibleServices"><a data-toggle="collapse" href="#collapsibleServices">Other packages...</a></h2>
 			</div>
 			<div id="collapsibleServices" class="row inline-columns collapse">
 			<?php
