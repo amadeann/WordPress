@@ -43,7 +43,8 @@
 						// http://hookr.io/functions/woocommerce_page_title/
 						// This depends on the Woocommerce installation
 						// As far as I know there is no direct way of accessing the page title from Wordpress (it's not the same as post title)
-						echo '<h2>' . get_the_title( wc_get_page_id( 'shop' ) ) . '<span class="span-dot">.</span></h2>';
+						// echo '<h2>' . get_the_title( wc_get_page_id( 'shop' ) ) . '<span class="span-dot">.</span></h2>';
+						echo '<h2>' . get_the_archive_title() . '<span class="span-dot">.</span></h2>';
 					}
 
 
