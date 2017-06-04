@@ -316,7 +316,7 @@ Based on solution from: https://docs.woocommerce.com/document/customise-the-wooc
 
 add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
 function woo_custom_breadrumb_home_url() {
-    return 'http://www.spicandspan.de/store';
+    return 'https://www.spicandspan.de/store';
 }
 
 /*

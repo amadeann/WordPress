@@ -1,0 +1,305 @@
+/*
+ Theme Name:   Divi Child
+ Theme URI:    http://www.ak-ventures.eu
+ Description:  Divi Child
+ Author:       Amadeusz Annissimo
+ Author URI:   http://www.ak-ventures.eu
+ Template:     Divi
+ Version:      1.0.0
+*/
+
+$sas-yellow: rgb(241, 210, 4);
+
+$twitterBootstrapPrefix: "tb";
+
+.#{$twitterBootstrapPrefix}-textarea {
+    height: 100% !important; // have to use !improtant flag here to fix the fixed height problem with bootstrap framework for textarea
+}
+
+// make sure that the tags styled as labes get bold font
+
+.#{$twitterBootstrapPrefix}-control-label {
+    font-weight: bold;
+}
+
+.cleaner-application-form .application-form-explanation {
+  padding: 20px 0 20px;
+  text-align: justify;
+}
+
+.cleaner-application-form-wrapper {
+    max-width: 750px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top:150px;
+    padding-bottom:150px;
+}
+
+.cleaner-application-form-wrapper h1 {
+    font-size: 32px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 479px) {
+    .cleaner-application-form-wrapper h1 {
+        font-size: 28px;
+    }  
+
+    .cleaner-application-form-wrapper {
+        padding-top:100px;
+        padding-bottom:100px;
+    }  
+
+    .cleaner-application-form-heading {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.cleaner-application-form-heading {
+    display: block;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    // show the form heading content on top of the overlay
+    position: relative;
+    z-index: 1
+}
+
+.cleaner-application-form-heading p {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+@media (max-width: 479px) {
+    .cleaner-application-form-heading h1 {
+        font-size: 32px;
+    }
+
+    .cleaner-application-form-heading p {
+        font-size: 16px;
+    }
+}
+
+.sas-black {
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.sas-before-dot {
+    white-space: nowrap;
+}
+
+.sas-after-dot {
+    color: #ffde00;
+}
+
+.sas-wrap-normal {
+    white-space: normal !important;
+}
+
+// override the default bootstrap font (to be consistent with Divi)
+
+.bootstrap-iso {
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.cleaner-application-hero-image {
+  background-image: url(http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/2017/05/home_open_room_bright_1600_1063.jpg);
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-image-overlay:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  display: block;
+}
+
+.cleaner-application-hero-image-overlay:before {
+  background-color: rgba(255,255,255,0.90);
+}
+
+// setting up the width for phone number fields using intl-tel-input library
+
+.intl-tel-input {
+    width: 100%;
+}
+
+// the following class fixes the problem with alignment of file input button on horizontal forms
+
+.horizontal-form-file-input-wrapper {
+    padding-top: 7px;
+}
+
+@media (max-width: 768px) {
+    .form-acceptance-checkbox-wrapper {
+        display: inline !important;
+    }
+    .form-acceptance-text-wrapper {
+        display: inline !important;
+    }
+    .form-acceptance-checkbox-wrapper .checkbox-terms input {
+        margin-left: auto !important;
+        position: relative !important;
+    }
+}
+
+// fixing the wbr tag problem in IE (word break opportunity)
+wbr:after { 
+    content: "\00200B"; 
+}
+
+.form-acceptance-text-wrapper {
+    text-align: justify;
+}
+
+/*
+******************
+ORDER FORM
+******************
+*/
+
+.order-form-wrapper {
+    max-width: 750px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top:150px;
+    padding-bottom:150px;
+}
+
+.order-form-packages h4,
+.order-form-cleaners h4,
+.order-form-property-size h4,
+.order-form-equipment h4,
+.order-form-extras h4 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.order-form-packages label,
+.order-form-cleaners label,
+.order-form-property-size label,
+.order-form-equipment label,
+.order-form-extras label {
+  width: 200px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.order-form-packages label,
+.order-form-cleaners label,
+.order-form-equipment label,
+.order-form-extras label {
+  height: 150px;    
+}
+
+.order-form-property-size label {
+  height: 100px;    
+}
+
+.order-form-packages .order-form-package-callout,
+.order-form-cleaners .order-form-cleaners-callout,
+.order-form-equipment .order-form-equipment-callout,
+.order-form-extras .order-form-extras-callout {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.order-form-packages .package-inner-wrapper,
+.order-form-cleaners .cleaners-inner-wrapper,
+.order-form-equipment .equipment-inner-wrapper,
+.order-form-extras .extras-inner-wrapper {
+  margin: auto;
+}
+
+.order-form-property-size .property-size-inner-wrapper {
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.order-form-packages .package-inner-wrapper .dynamic-checkbox-icon,
+.order-form-cleaners .cleaners-inner-wrapper .dynamic-checkbox-icon,
+.order-form-property-size .property-size-inner-wrapper .dynamic-checkbox-icon,
+.order-form-equipment .equipment-inner-wrapper .dynamic-checkbox-icon,
+.order-form-extras .extras-inner-wrapper .dynamic-checkbox-icon {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+
+.order-form-packages .package-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-cleaners .cleaners-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-property-size .property-size-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-equipment .equipment-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-extras .extras-inner-wrapper .dynamic-checkbox-icon:before {
+    content: "\f096 "; // unchecked box
+}
+
+.order-form-packages .ui-checkboxradio-checked .package-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-cleaners .ui-checkboxradio-checked .cleaners-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-property-size .ui-checkboxradio-checked .property-size-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-equipment .ui-checkboxradio-checked .equipment-inner-wrapper .dynamic-checkbox-icon:before,
+.order-form-extras .ui-checkboxradio-checked .extras-inner-wrapper .dynamic-checkbox-icon:before {
+    content: "\f046"; // checked box
+}
+
+// allow dividing the bootstrap grid into 5 columns (custom feature)
+
+.order-form-property-size .order-form-property-size-column {
+    width: 20%;
+}
+
+// overriding the default jquery-ui styles (sometimes it is necessary to specify more than enough classes, to override the jquery ui options 
+
+// .ui-checkboxradio-label.ui-checkboxradio-radio-label,
+.order-form .ui-checkboxradio-label {
+    border: 1px solid $sas-yellow;
+    background: transparent;  
+}
+
+// .ui-checkboxradio-radio-label.ui-checkboxradio-checked,
+.order-form .ui-checkboxradio-checked {
+    border: 1px solid $sas-yellow;
+    background: $sas-yellow;
+}
+
+// .ui-checkboxradio-label.ui-checkboxradio-radio-label.ui-state-active,
+// .ui-checkboxradio-label.ui-checkboxradio-radio-label.ui-state-active:hover,
+.order-form .ui-checkboxradio-label.ui-state-active,
+.order-form .ui-checkboxradio-label.ui-state-active:hover {
+    border: 1px solid $sas-yellow;
+    background: $sas-yellow;
+}
+
+// .ui-checkboxradio-label.ui-checkboxradio-radio-label:hover,
+.order-form .ui-checkboxradio-label:hover  { // pseudoclass 'focus' is not enough to override jquery ui rules
+    border: 1px solid $sas-yellow;
+    background: rgba($sas-yellow,0.2);  
+}
+
+.ui-checkboxradio-label.ui-visual-focus {
+	box-shadow: 0 0 3px 1px lighten($sas-yellow,30%);
+}
+
+.order-form-icon {
+    height:70px;
+}

@@ -34,7 +34,7 @@ if ( get_option( 'show_on_front' ) == 'page' && is_front_page() ) {
 
 	if ( class_exists( 'WooCommerce' ) && is_really_woocommerce() ) {
   		
-		$style = 'background-image: url(' . 'http://www.spicandspan.de/wp-content/uploads/2016/11/shop_header-image.jpg' . ');';
+		$style = 'background-image: url(' . 'https://www.spicandspan.de/wp-content/uploads/2016/11/shop_header-image.jpg' . ');';
 
 	} else {
 	  	

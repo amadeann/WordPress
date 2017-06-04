@@ -20,7 +20,7 @@
 
 if ( current_user_can( 'edit_theme_options' ) ) {
 
-	$footer_copyright  = get_theme_mod( 'illdy_footer_copyright', __( '&copy; Copyright 2016. All Rights Reserved.', 'illdy' ) );
+	$footer_copyright  = get_theme_mod( 'illdy_footer_copyright', __( '&copy; Copyright 2016-2017. All Rights Reserved.', 'illdy' ) );
 
 	$img_footer_logo   = get_theme_mod( 'illdy_img_footer_logo', esc_url( get_template_directory_uri() . '/layout/images/footer-logo.png' ) );
 

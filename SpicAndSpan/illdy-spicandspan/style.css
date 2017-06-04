@@ -241,3 +241,11 @@ Changes are only applied to large screens*/
 .collapsibleServices {
 	color: #000000;
 }
+
+/* Fix the header image being very large on mobile */
+
+@media only screen and (max-width: 1024px) {
+	#header {
+		background-attachment: initial !important;
+	}
+}
