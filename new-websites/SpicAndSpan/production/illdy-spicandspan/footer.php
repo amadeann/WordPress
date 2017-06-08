@@ -34,7 +34,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 
 ?>
 
-<footer id="footer">
+<footer id="footer" style="text-align: right; padding: 1px 0; font-size: 0.8em">
 
 	<div class="container">
 
@@ -56,7 +56,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 
 			?>
 
-			<div class="col-sm-3">
+			<div class="col-sm-3" style="display:none">
 
 				<?php
 
@@ -74,7 +74,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 
 			</div><!--/.col-sm-3-->
 
-			<div class="col-sm-3">
+			<div class="col-sm-3" style="display:none">
 
 				<?php
 
@@ -92,7 +92,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 
 			</div><!--/.col-sm-3-->
 
-			<div class="col-sm-3">
+			<div class="col-sm-3" style="display:none">
 
 				<?php
 
@@ -110,7 +110,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 
 			</div><!--/.col-sm-3-->
 
-			<div class="col-sm-3">
+			<div class="col-sm-12">
 
 				<?php if ( $img_footer_logo ): ?>
 

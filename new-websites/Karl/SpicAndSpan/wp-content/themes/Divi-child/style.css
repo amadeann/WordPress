@@ -124,7 +124,7 @@ ORDER FORM
 ******************
 */
 .order-form-wrapper {
-  max-width: 750px;
+  max-width: 1000px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -136,30 +136,62 @@ ORDER FORM
 .order-form-property-size h4,
 .order-form-equipment h4,
 .order-form-extras h4 {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: black; }
 
 .order-form-packages label,
 .order-form-cleaners label,
 .order-form-property-size label,
 .order-form-equipment label,
 .order-form-extras label {
-  width: 200px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.order-form-packages.sas-yellow label,
+.order-form-cleaners.sas-yellow label,
+.order-form-property-size.sas-yellow label,
+.order-form-equipment.sas-yellow label,
+.order-form-extras.sas-yellow label {
+  box-shadow: 5px 5px 5px rgba(241, 210, 4, 0.5); }
+
+.order-form-packages.sas-aqua label,
+.order-form-cleaners.sas-aqua label,
+.order-form-property-size.sas-aqua label,
+.order-form-equipment.sas-aqua label,
+.order-form-extras.sas-aqua label {
+  box-shadow: 5px 5px 5px rgba(126, 190, 197, 0.5); }
+
+.order-form-packages.sas-pink label,
+.order-form-cleaners.sas-pink label,
+.order-form-property-size.sas-pink label,
+.order-form-equipment.sas-pink label,
+.order-form-extras.sas-pink label {
+  box-shadow: 5px 5px 5px rgba(239, 100, 98, 0.5); }
+
+.order-form-packages label {
+  width: 150px; }
+
+.order-form-cleaners label,
+.order-form-equipment label,
+.order-form-extras label {
+  width: 100px; }
+
+.order-form-property-size label {
+  width: 100px; }
 
 .order-form-packages label,
 .order-form-cleaners label,
 .order-form-equipment label,
 .order-form-extras label {
-  height: 150px; }
+  height: 80px; }
 
 .order-form-property-size label {
-  height: 100px; }
+  height: 60px; }
 
 .order-form-packages .order-form-package-callout,
 .order-form-cleaners .order-form-cleaners-callout,
@@ -168,7 +200,8 @@ ORDER FORM
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 200;
-  font-size: 12px; }
+  font-size: 12px;
+  color: black; }
 
 .order-form-packages .package-inner-wrapper,
 .order-form-cleaners .cleaners-inner-wrapper,
@@ -208,26 +241,123 @@ ORDER FORM
   width: 20%; }
 
 .order-form .ui-checkboxradio-label {
-  border: 1px solid #f1d204;
-  background: transparent; }
+  background: transparent;
+  transition: 0.05s linear; }
 
-.order-form .ui-checkboxradio-checked {
+.order-form .sas-yellow .ui-checkboxradio-label {
+  border: 1px solid #f1d204; }
+
+.order-form .sas-aqua .ui-checkboxradio-label {
+  border: 1px solid #7ebeC5; }
+
+.order-form .sas-pink .ui-checkboxradio-label {
+  border: 1px solid #ef6462; }
+
+.order-form .sas-yellow .ui-checkboxradio-checked {
   border: 1px solid #f1d204;
-  background: #f1d204; }
+  background: rgba(241, 210, 4, 0.5); }
+
+.order-form .sas-aqua .ui-checkboxradio-checked {
+  border: 1px solid #7ebeC5;
+  background: rgba(126, 190, 197, 0.5); }
+
+.order-form .sas-pink .ui-checkboxradio-checked {
+  border: 1px solid #ef6462;
+  background: rgba(239, 100, 98, 0.5); }
 
 .order-form .ui-checkboxradio-label.ui-state-active,
+.order-form .ui-checkboxradio-label:hover,
 .order-form .ui-checkboxradio-label.ui-state-active:hover {
-  border: 1px solid #f1d204;
-  background: #f1d204; }
+  box-shadow: none;
+  transform: translate(3px, 3px); }
 
-.order-form .ui-checkboxradio-label:hover {
+.order-form .sas-yellow .ui-checkboxradio-label.ui-state-active,
+.order-form .sas-yellow .ui-checkboxradio-label:hover,
+.order-form .sas-yellow .ui-checkboxradio-label.ui-state-active:hover {
+  border: 1px solid #f1d204;
+  background: rgba(241, 210, 4, 0.5); }
+
+.order-form .sas-aqua .ui-checkboxradio-label.ui-state-active,
+.order-form .sas-aqua .ui-checkboxradio-label:hover,
+.order-form .sas-aqua .ui-checkboxradio-label.ui-state-active:hover {
+  border: 1px solid #7ebeC5;
+  background: rgba(126, 190, 197, 0.5); }
+
+.order-form .sas-pink .ui-checkboxradio-label.ui-state-active,
+.order-form .sas-pink .ui-checkboxradio-label:hover,
+.order-form .sas-pink .ui-checkboxradio-label.ui-state-active:hover {
+  border: 1px solid #ef6462;
+  background: rgba(239, 100, 98, 0.5); }
+
+.order-form .sas-yellow .ui-checkboxradio-label:hover {
   border: 1px solid #f1d204;
   background: rgba(241, 210, 4, 0.2); }
 
-.ui-checkboxradio-label.ui-visual-focus {
+.order-form .sas-aqua .ui-checkboxradio-label:hover {
+  border: 1px solid #7ebeC5;
+  background: rgba(126, 190, 197, 0.2); }
+
+.order-form .sas-pink .ui-checkboxradio-label:hover {
+  border: 1px solid #ef6462;
+  background: rgba(239, 100, 98, 0.2); }
+
+.sas-yellow .ui-checkboxradio-label.ui-visual-focus {
   box-shadow: 0 0 3px 1px #fdef91; }
 
+.sas-aqua .ui-checkboxradio-label.ui-visual-focus {
+  box-shadow: 0 0 3px 1px #e8f3f4; }
+
+.sas-pink .ui-checkboxradio-label.ui-visual-focus {
+  box-shadow: 0 0 3px 1px #fdeded; }
+
 .order-form-icon {
-  height: 70px; }
+  height: 30px; }
+
+.order-form fieldset legend {
+  font-size: 14px;
+  margin-bottom: 10px; }
+
+.order-form .sas-yellow .package-fieldset-completed {
+  color: #f1d204; }
+
+.order-form .sas-aqua .cleaners-fieldset-completed {
+  color: #7ebeC5; }
+
+.order-form .sas-pink .property-size-fieldset-completed {
+  color: #ef6462; }
+
+.order-form .noUi-horizontal .noUi-handle {
+  border-radius: 100%;
+  width: 34px;
+  height: 34px;
+  top: -11px;
+  left: -20px;
+  box-shadow: 5px 5px 5px #a2b1be;
+  transition: 0.05s linear; }
+
+.order-form .noUi-horizontal .noUi-handle:active {
+  transform: translate(3px, 3px);
+  box-shadow: none; }
+
+.order-form .noUi-handle:before {
+  display: none; }
+
+.order-form .noUi-handle:after {
+  display: none; }
+
+.order-form .noUi-target {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #677e93; }
+
+.order-form .property-size-wrapper {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 15px; }
+
+.order-form .property-size-wrapper input {
+  text-align: right;
+  width: 3em;
+  padding-right: 0.5em; }
 
 /*# sourceMappingURL=style.css.map */

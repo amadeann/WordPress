@@ -69,10 +69,22 @@ function enqueue_incons() {
     );  
 }
 
+function enqueue_vuejs() {
+
+	wp_enqueue_script(
+        'vuejs',
+        'https://unpkg.com/vue',
+        false,
+        null
+    );     
+}
+
 add_action( 'wp_enqueue_scripts', 'enqueue_intl_tel_input' );
 
 add_action( 'wp_enqueue_scripts', 'enqueue_jquery_ui' );
 
 add_action( 'wp_enqueue_scripts', 'enqueue_incons' );
+
+add_action( 'wp_enqueue_scripts', 'enqueue_vuejs' );
 
 ?>

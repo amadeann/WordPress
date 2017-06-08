@@ -1,0 +1,666 @@
+<section class="bootstrap-iso order-form" id="order-form">
+    <div class="order-form-wrapper tb-container">
+        <div class="tb-row">
+            <div class="tb-col-sm-8">
+                <h2>Order Form</h2>
+                <div class="order-form">
+                    <form class="">
+                        <div class="tb-row">
+                            <div class="tb-col-tn-12 tb-col-sm-12 tb-col-md-9">
+                                <fieldset class="order-form-packages sas-yellow">
+                                    <legend>
+                                        <span class="fa-stack">
+                                            <i class="fa fa-circle fa-stack-2x package-fieldset-completed tb-hidden"></i>
+                                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                        </span>
+                                        <span>Cleaning Package:</span>
+                                    </legend>
+                                    <div class="tb-row">
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="package-radio-1" class="package-radio-label">
+                                                    <div class="package-inner-wrapper">
+                                                        <h4>
+                                                            <span class="sas-black">
+                                                                <span class="sas-before-dot sas-wrap-normal">REGELMÄßIGE REINIGUNG</span>
+                                                                <span class="sas-after-dot"><wbr>.</span>
+                                                            </span>
+                                                        </h4>
+                                                        <p class="order-form-package-callout">For regular customers only</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="package-radio" id="package-radio-1" class="package-radio" value="regel" v-model="package">
+                                            </div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="package-radio-2" class="package-radio-label">
+                                                    <div class="package-inner-wrapper">
+                                                        <h4>
+                                                            <span class="sas-black">
+                                                                <span class="sas-before-dot sas-wrap-normal">PRIMA REINIGUNG</span>
+                                                                <span class="sas-after-dot"><wbr>.</span>
+                                                            </span>
+                                                        </h4>
+                                                        <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="package-radio" id="package-radio-2" class="package-radio" value="prima" v-model="package"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="package-radio-3" class="package-radio-label">
+                                                    <div class="package-inner-wrapper">
+                                                        <h4>
+                                                            <span class="sas-black">
+                                                                <span class="sas-before-dot sas-wrap-normal">UMZÜGE REINIGUNG</span>
+                                                                <span class="sas-after-dot"><wbr>.</span>
+                                                            </span>
+                                                        </h4>
+                                                        <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="package-radio" id="package-radio-3" class="package-radio" value="umzuege" v-model="package"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="package-radio-4" class="package-radio-label">
+                                                    <div class="package-inner-wrapper">
+                                                        <h4>
+                                                            <span class="sas-black">
+                                                                <span class="sas-before-dot sas-wrap-normal">PARTY REINIGUNG</span>
+                                                                <span class="sas-after-dot"><wbr>.</span>
+                                                            </span>
+                                                        </h4>
+                                                        <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="package-radio" id="package-radio-4" class="package-radio" value="party" v-model="package"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="package-radio-5" class="package-radio-label">
+                                                    <div class="package-inner-wrapper">
+                                                        <h4>
+                                                            <span class="sas-black">
+                                                                <span class="sas-before-dot sas-wrap-normal"></span>ALLERGIE REINIGUNG
+                                                                <span class="sas-after-dot"><wbr>.</span>
+                                                            </span>
+                                                        </h4>
+                                                        <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="package-radio" id="package-radio-5" class="package-radio" value="allergie" v-model="package"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="package-radio-6" class="package-radio-label">
+                                                    <div class="package-inner-wrapper">
+                                                        <h4>
+                                                            <span class="sas-black">
+                                                                <span class="sas-before-dot sas-wrap-normal">BÜRO REINIGUNG</span>
+                                                                <span class="sas-after-dot"><wbr>.</span>
+                                                            </span>
+                                                        </h4>
+                                                        <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="package-radio" id="package-radio-6" class="package-radio" value="buero" v-model="package"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="tb-col-tn-12 tb-col-sm-3">
+                                <fieldset class="order-form-cleaners sas-aqua">
+                                    <legend>
+                                        <span class="fa-stack">
+                                            <i class="fa fa-circle fa-stack-2x cleaners-fieldset-completed tb-hidden"></i>
+                                            <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                        </span>
+                                        <span>Cleaners:</span>
+                                    </legend>
+                                    <div class="tb-row">
+                                        <div class="tb-col-tn-6 tb-col-xs-12 tb-col-sm-12">
+                                            <div class="tb-form-group">
+                                                <label for="cleaners-radio-1" class="cleaners-radio-label">
+                                                    <div class="cleaners-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-cleaners-callout"><strong>1</strong> cleaning professional</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="cleaners-radio" id="cleaners-radio-1" class="cleaners-radio" value="1" v-model="cleaners"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-12 tb-col-sm-12">
+                                            <div class="tb-form-group">
+                                                <label for="cleaners-radio-2" class="cleaners-radio-label">
+                                                    <div class="cleaners-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg"
+                                                                class="order-form-icon"><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-cleaners-callout"><strong>2</strong> cleaning professionals</p>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="cleaners-radio" id="cleaners-radio-2" class="cleaners-radio" value="2" v-model="cleaners"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="tb-row">
+                            <div class="tb-col-tn-12 tb-col-sm-12">
+                                <fieldset class="order-form-property-size sas-pink">
+                                    <legend>
+                                        <span>Property size (slider):</span>
+                                    </legend>
+                                    <div class="tb-row">
+                                        <div class="tb-col-tn-12 tb-col-xs-12 tb-col-sm-12">
+                                            <div class="property-size-wrapper">
+                                                <span id="property-size-value" style="font-size: 24px;"><input type="text" id="property-size-target" value="50" name="property-size">
+                                                    <span>&nbsp;sqm</span>
+                                                </span>
+                                            </div>
+                                            <div id="soft" class="tb-form-group"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <!--</div>-->
+                        <div class="tb-row">
+                            <div class="tb-col-tn-12 tb-col-sm-12 tb-col-md-3">
+                                <fieldset class="order-form-equipment sas-aqua">
+                                    <legend>Do you have your own? </legend>
+                                    <div class="tb-row">
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-12">
+                                            <div class="tb-form-group">
+                                                <label for="equipment-checkbox-1">
+                                                    <div class="equipment-inner-wrapper">
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/detergent.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-equipment-callout">Cleaning agents</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="equipment-checkbox" id="equipment-checkbox-1" class="equipment-checkbox" v-model="equipment.detergents"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-12">
+                                            <div class="tb-form-group">
+                                                <label for="equipment-checkbox-2">
+                                                    <div class="equipment-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/mop-and-bucket.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-equipment-callout">Mop</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="equipment-checkbox" id="equipment-checkbox-2" class="equipment-checkbox" v-model="equipment.mop"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-12">
+                                            <div class="tb-form-group">
+                                                <label for="equipment-checkbox-3">
+                                                    <div class="equipment-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/vacuum-cleaner.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-equipment-callout">Vacuum Cleaner</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="equipment-checkbox" id="equipment-checkbox-3" class="equipment-checkbox" v-model="equipment.vacuum"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="tb-col-tn-12 tb-col-sm-12 tb-col-md-9">
+                                <fieldset class="order-form-extras sas-yellow">
+                                    <legend>Do you have any special requests? </legend>
+                                    <div class="tb-row">
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="extras-checkbox-1">
+                                                    <div class="extras-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/fridge.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-extras-callout">Fridge Cleaning</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="extras-checkbox" id="extras-checkbox-1" class="extras-checkbox"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="extras-checkbox-2">
+                                                    <div class="extras-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/oven.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-extras-callout">Oven Cleaning</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="extras-checkbox" id="extras-checkbox-2" class="extras-checkbox"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="extras-checkbox-3">
+                                                    <div class="extras-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/window.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-extras-callout">Window Cleaning</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="extras-checkbox" id="extras-checkbox-3" class="extras-checkbox"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="extras-checkbox-4">
+                                                    <div class="extras-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/microwave-oven.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-extras-callout">Microwave Cleaning</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="extras-checkbox" id="extras-checkbox-4" class="extras-checkbox"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="extras-checkbox-5">
+                                                    <div class="extras-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/carpet.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-extras-callout">Carpet Cleaning</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="extras-checkbox" id="extras-checkbox-5" class="extras-checkbox"></div>
+                                        </div>
+                                        <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                                            <div class="tb-form-group">
+                                                <label for="extras-checkbox-6">
+                                                    <div class="extras-inner-wrapper">
+
+                                                        <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/laundry-two-shirts.svg"
+                                                                class="order-form-icon"></h4>
+                                                        <p class="order-form-extras-callout">Laundry Service</p>
+                                                    </div>
+                                                </label>
+                                                <input type="checkbox" name="extras-checkbox" id="extras-checkbox-6" class="extras-checkbox"></div>
+                                        </div>
+                                    </div>
+                                    <order-extras v-bind:extras="extras"></order-extras>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend>Personal Information</legend>
+                            <div class="tb-row">
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <select class="tb-form-control" id="salutation" name="salutation">
+                                            <option value="Mr.">---</option>
+                                            <option value="Mr.">Mr.</option>
+                                            <option value="Mrs.">Mrs.</option>
+                                            <option value="Ms.">Ms.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="first_name" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="last_name" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="company" placeholder="Company (optional)">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="phone_number" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Property Address</legend>
+                            <div class="tb-row">
+                                <div class="tb-col-tn-12 tb-col-xs-12 tb-col-sm-12">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="address_1" placeholder="Street">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-12 tb-col-sm-12">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="address_2" placeholder="Address Line 2 (Optional)">
+                                    </div>
+                                </div>
+                                <div class="tb-hidden tb-col-tn-12 tb-col-xs-12 tb-col-sm-12">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="address_3" placeholder="Address Line 3">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="city" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="zip_code" placeholder="Zip Code">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
+                                    <div class="tb-form-group">
+                                        <select class="tb-form-control" id="country_iso" name="country_iso">
+                                            <option value="DE">Germany</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Date &amp; Time</legend>
+                            <div class="tb-row">
+                                <div class="tb-col-tn-12 tb-col-xs-12 tb-col-sm-6">
+                                    <div class="tb-form-group">
+                                        <input type="text" class="tb-form-control" id="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="tb-col-tn-12 tb-col-xs-12 tb-col-sm-6">
+                                    <div class="tb-form-group">
+                                        <div class="tb-input-group">
+                                            <span class="tb-input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                            <input type="text" class="tb-form-control" id="time" name="time">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="tb-btn tb-btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="tb-col-sm-4">
+                <div>
+                    <h3>Hourly Price:
+                        <span id="hourly-price" v-text="hourlyPrice"></span>
+                    </h3>
+                    <h4>Package:
+                        <span v-text="package"></span>
+                    </h4>
+                </div>
+                <div class="tb-row">
+                    <div class="tb-col-sm-8">Detergents</div><div class="tb-col-sm-4" v-text="equipment.detergents"></div>
+                    <div class="tb-col-sm-8">Mop</div><div class="tb-col-sm-4" v-text="equipment.mop"></div>
+                    <div class="tb-col-sm-8">Vacuum Cleaner</div><div class="tb-col-sm-4" v-text="equipment.vacuum"></div>
+                </div>
+                <ul>
+                    <li v-for="extra in selectedExtras" v-text="extra.name"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.0.0/nouislider.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.0.0/nouislider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+<script src="https://unpkg.com/flatpickr"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(function () {
+            $(".package-radio").checkboxradio({
+                icon: false
+            });
+            $(".cleaners-radio").checkboxradio({
+                icon: false
+            });
+            $(".property-size-radio").checkboxradio({
+                icon: false
+            });
+            $(".equipment-checkbox").checkboxradio({
+                icon: false
+            });
+            $(".extras-checkbox").checkboxradio({
+                icon: false
+            });
+        });
+
+        var packageFieldsetIndicator = $('.package-fieldset-completed');
+        var cleanersFieldsetIndicator = $('.cleaners-fieldset-completed');
+        var propertySizeFieldsetIndicator = $('.property-size-fieldset-completed');
+
+        // notice that the listener is put on the input field and not on the label!
+        // this allows to highlight the 'completed' circle also when a package is selected by keyboard
+        $('.package-radio').on('click', function (event) {
+            packageFieldsetIndicator.addClass('tb-show').removeClass('tb-hidden');
+        });
+
+        $('.cleaners-radio').on('click', function (event) {
+            cleanersFieldsetIndicator.addClass('tb-show').removeClass('tb-hidden');
+        });
+
+        $('.property-size-radio').on('click', function (event) {
+            propertySizeFieldsetIndicator.addClass('tb-show').removeClass('tb-hidden');
+        });
+
+        // slider
+
+        var softSlider = document.getElementById('soft');
+
+        noUiSlider.create(softSlider, {
+            start: 50,
+            range: {
+                min: 0,
+                max: 220
+            },
+            format: wNumb({
+                decimals: 0,
+                edit: function (value) {
+                    if (value < 10) {
+                        return '10';
+                    } else if (value >= 200) {
+                        return '200+';
+                    } else {
+                        return value;
+                    }
+                }
+            })
+        });
+
+        softSlider.noUiSlider.on('change', function (values, handle) {
+            if ((values[handle] >= 200) || (values[handle] == '200+')) {
+                softSlider.noUiSlider.set(200);
+            } else if ((values[handle] < 10) || (values[handle] == '10')) {
+                softSlider.noUiSlider.set(10);
+            }
+        });
+
+        // var inputFormat = document.getElementById('input-format');
+        var propertySizeTarget = document.getElementById('property-size-target');
+
+        softSlider.noUiSlider.on('update', function (values, handle) {
+            // inputFormat.value = values[handle];
+            propertySizeTarget.value = values[handle];
+        });
+
+        $(propertySizeTarget).change(function () {
+            softSlider.noUiSlider.set($(this).val());
+        });
+
+        $(function () {
+            $("#date").flatpickr({
+                dateFormat: "Y-m-d",
+                altInput: true,
+                altFormat: "Y-m-d"
+            });
+
+            $("#time").flatpickr({
+                enableTime: true,
+                noCalendar: true,
+
+                enableSeconds: false, // disabled by default
+
+                time_24hr: false, // AM/PM time picker is used by default
+
+                // default format
+                dateFormat: "H:i",
+
+                minuteIncrement: 15,
+
+                defaultHour: 15 // change it to time 'now'
+
+            });
+        });
+    });
+</script>
+<script>
+
+    Vue.component('order-extras',{
+        props: ['extras'],
+        template:
+            `
+                <div class="tb-row">
+                    <order-extra v-for="extra in extras" :key="extra.id" v-bind:extra="extra"></order-extra>
+                </div>
+            `
+    });
+
+    Vue.component('order-extra', {
+        props: ['extra'],
+        template: 
+            `
+            <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
+                <div class="tb-form-group">
+                    <label v-bind:for="'extras-'+extra.name">
+                        <div class="extras-inner-wrapper">
+                            <h4><img v-bind:src="extra.icon"
+                                    class="order-form-icon"></h4>
+                            <p class="order-form-extras-callout">{{ extra.name }}</p>
+                        </div>
+                    </label>
+                    <input type="checkbox" name="extras-checkbox" class="extras-checkbox" v-bind:id="'extras-'+extra.name" v-model="extra.selected"></div>
+            </div>
+            `
+    });
+
+    var pricing = {
+        regel: [24, 20],
+        prima: [29, 25],
+        umzuege: [34, 30],
+        party: [39, 35],
+        allergie: [39, 35],
+        buero: ['pricing on request', 'pricing on request']
+    }
+    var orderForm = new Vue({
+        el: '#order-form',
+        data: {
+            package: '',
+            cleaners: '',
+            equipment: {
+                detergents: false,
+                mop: false,
+                vacuum: false,
+            },
+            extras:
+            [
+                {
+                    id: '1',
+                    key: 'fridge',
+                    name: 'Fridge Cleaning',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/fridge.svg',
+                    selected: false
+                },
+                {
+                    id: '2',
+                    key: 'oven',
+                    name: 'Oven Cleaning',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/oven.svg',
+                    selected: false
+                },
+                {
+                    id: '3',
+                    key: 'window',
+                    name: 'Window Cleaning',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/window.svg',
+                    selected: false
+                },
+                {
+                    id: '4',
+                    key: 'microwave',
+                    name: 'Microwave Cleaning',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/microwave-oven.svg',
+                    selected: false
+                },
+                {
+                    id: '5',
+                    key: 'carpet',
+                    name: 'Carpet Cleaning',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/carpet.svg',
+                    selected: false
+                },
+                {
+                    id: '6',
+                    key: 'laundry',
+                    name: 'Laundry Service',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/laundry-two-shirts.svg',
+                    selected: false
+                }
+            ]
+        },
+        computed: {
+            hourlyPrice: function () {
+                var packagePrice = ['', ''];
+                switch (this.package) {
+                    case 'regel':
+                        packagePrice = pricing.regel;
+                        break;
+                    case 'prima':
+                        packagePrice = pricing.prima;
+                        break;
+                    case 'umzuege':
+                        packagePrice = pricing.umzuege;
+                        break;
+                    case 'party':
+                        packagePrice = pricing.allergie;
+                        break;
+                    case 'allergie':
+                        packagePrice = pricing.party;
+                        break;
+                    case 'buero':
+                        packagePrice = pricing.buero;
+                        return packagePrice[0];
+                        break;
+                    default:
+                        return '';
+                }
+                switch (this.cleaners) {
+                    case '1':
+                        packagePrice = packagePrice[0];
+                        break;
+                    case '2':
+                        packagePrice = packagePrice[1];
+                        break;
+                    default:
+                        return '';
+                }
+                return '€' + packagePrice + ' /cleaner';
+            },
+            selectedExtras: function() {
+                return this.extras.filter(extra => extra.selected);
+            }
+        }
+    });
+</script>
