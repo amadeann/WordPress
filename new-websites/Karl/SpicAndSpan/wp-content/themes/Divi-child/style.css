@@ -128,8 +128,11 @@ ORDER FORM
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 150px; }
+
+.order-form fieldset {
+  padding-bottom: 2em; }
 
 .order-form-packages h4,
 .order-form-cleaners h4,
@@ -242,7 +245,9 @@ ORDER FORM
 
 .order-form .ui-checkboxradio-label {
   background: transparent;
-  transition: 0.05s linear; }
+  transition: 0.05s linear;
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
 
 .order-form .sas-yellow .ui-checkboxradio-label {
   border: 1px solid #f1d204; }
@@ -315,7 +320,7 @@ ORDER FORM
 
 .order-form fieldset legend {
   font-size: 14px;
-  margin-bottom: 10px; }
+  margin-bottom: 2em; }
 
 .order-form .sas-yellow .package-fieldset-completed {
   color: #f1d204; }
@@ -359,5 +364,25 @@ ORDER FORM
   text-align: right;
   width: 3em;
   padding-right: 0.5em; }
+
+.order-form .feature-list {
+  list-style: none;
+  vertical-align: top;
+  margin: 50px 0; }
+
+.order-form .title {
+  text-align: center; }
+
+.order-form .feature-list .feature {
+  display: table-row;
+  font-weight: 200; }
+
+.order-form .feature .icon,
+.order-form .feature .description {
+  display: table-cell; }
+
+.order-form .feature .icon {
+  padding-right: 0.5em;
+  color: #8b8b8b; }
 
 /*# sourceMappingURL=style.css.map */

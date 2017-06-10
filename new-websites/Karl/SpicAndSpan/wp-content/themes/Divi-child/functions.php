@@ -1,7 +1,7 @@
 <?php
 function my_theme_enqueue_styles() {
 
-    $parent_style = 'parent-style';
+    $parent_style = 'divi-style';
     $child_style = 'child-style';
     $bootstrap_style = 'bootstrap-iso';
 
