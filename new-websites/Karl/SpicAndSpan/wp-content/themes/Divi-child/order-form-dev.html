@@ -39,9 +39,10 @@
                                                 <span>Cleaning Package:</span>
                                             </legend>
                                             <div class="tb-row">
+                                                <order-package v-for="package in packages" :key="package.id" v-bind:package="package" @change="selectPackage"></order-package>
                                                 <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
                                                     <div class="tb-form-group">
-                                                        <label for="package-radio-1" class="package-radio-label">
+                                                        <label for="package-regel" class="package-radio-label">
                                                             <div class="package-inner-wrapper">
                                                                 <h4>
                                                                     <span class="sas-black">
@@ -52,86 +53,10 @@
                                                                 <p class="order-form-package-callout">For regular customers only</p>
                                                             </div>
                                                         </label>
-                                                        <input type="radio" name="package-radio" id="package-radio-1" class="package-radio" value="regel" v-model="package">
+                                                        <input type="radio" name="package-radio" id="package-regel" class="package-radio" value="regel">
                                                     </div>
                                                 </div>
-                                                <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
-                                                    <div class="tb-form-group">
-                                                        <label for="package-radio-2" class="package-radio-label">
-                                                            <div class="package-inner-wrapper">
-                                                                <h4>
-                                                                    <span class="sas-black">
-                                                                        <span class="sas-before-dot sas-wrap-normal">PRIMA REINIGUNG</span>
-                                                                        <span class="sas-after-dot"><wbr>.</span>
-                                                                    </span>
-                                                                </h4>
-                                                                <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" name="package-radio" id="package-radio-2" class="package-radio" value="prima" v-model="package"></div>
-                                                </div>
-                                                <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
-                                                    <div class="tb-form-group">
-                                                        <label for="package-radio-3" class="package-radio-label">
-                                                            <div class="package-inner-wrapper">
-                                                                <h4>
-                                                                    <span class="sas-black">
-                                                                        <span class="sas-before-dot sas-wrap-normal">UMZÜGE REINIGUNG</span>
-                                                                        <span class="sas-after-dot"><wbr>.</span>
-                                                                    </span>
-                                                                </h4>
-                                                                <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" name="package-radio" id="package-radio-3" class="package-radio" value="umzuege" v-model="package"></div>
-                                                </div>
-                                                <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
-                                                    <div class="tb-form-group">
-                                                        <label for="package-radio-4" class="package-radio-label">
-                                                            <div class="package-inner-wrapper">
-                                                                <h4>
-                                                                    <span class="sas-black">
-                                                                        <span class="sas-before-dot sas-wrap-normal">PARTY REINIGUNG</span>
-                                                                        <span class="sas-after-dot"><wbr>.</span>
-                                                                    </span>
-                                                                </h4>
-                                                                <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" name="package-radio" id="package-radio-4" class="package-radio" value="party" v-model="package"></div>
-                                                </div>
-                                                <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
-                                                    <div class="tb-form-group">
-                                                        <label for="package-radio-5" class="package-radio-label">
-                                                            <div class="package-inner-wrapper">
-                                                                <h4>
-                                                                    <span class="sas-black">
-                                                                        <span class="sas-before-dot sas-wrap-normal"></span>ALLERGIE REINIGUNG
-                                                                        <span class="sas-after-dot"><wbr>.</span>
-                                                                    </span>
-                                                                </h4>
-                                                                <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" name="package-radio" id="package-radio-5" class="package-radio" value="allergie" v-model="package"></div>
-                                                </div>
-                                                <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
-                                                    <div class="tb-form-group">
-                                                        <label for="package-radio-6" class="package-radio-label">
-                                                            <div class="package-inner-wrapper">
-                                                                <h4>
-                                                                    <span class="sas-black">
-                                                                        <span class="sas-before-dot sas-wrap-normal">BÜRO REINIGUNG</span>
-                                                                        <span class="sas-after-dot"><wbr>.</span>
-                                                                    </span>
-                                                                </h4>
-                                                                <p class="order-form-package-callout">Lorem ipsum dolor sit amet</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" name="package-radio" id="package-radio-6" class="package-radio" value="buero" v-model="package"></div>
-                                                </div>
                                             </div>
-                                            <order-packages v-bind:packages="packages"></order-packages>
                                         </fieldset>
                                     </div>
                                     <div class="tb-col-tn-12 tb-col-sm-3">
@@ -144,31 +69,7 @@
                                                 <span>Cleaners:</span>
                                             </legend>
                                             <div class="tb-row">
-                                                <div class="tb-col-tn-6 tb-col-xs-12 tb-col-sm-12">
-                                                    <div class="tb-form-group">
-                                                        <label for="cleaners-radio-1" class="cleaners-radio-label">
-                                                            <div class="cleaners-inner-wrapper">
-
-                                                                <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg"
-                                                                        class="order-form-icon"></h4>
-                                                                <p class="order-form-cleaners-callout"><strong>1</strong> cleaning professional</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" name="cleaners-radio" id="cleaners-radio-1" class="cleaners-radio" value="1" v-model="cleaners"></div>
-                                                </div>
-                                                <div class="tb-col-tn-6 tb-col-xs-12 tb-col-sm-12">
-                                                    <div class="tb-form-group">
-                                                        <label for="cleaners-radio-2" class="cleaners-radio-label">
-                                                            <div class="cleaners-inner-wrapper">
-
-                                                                <h4><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg"
-                                                                        class="order-form-icon"><img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg"
-                                                                        class="order-form-icon"></h4>
-                                                                <p class="order-form-cleaners-callout"><strong>2</strong> cleaning professionals</p>
-                                                            </div>
-                                                        </label>
-                                                        <input type="radio" name="cleaners-radio" id="cleaners-radio-2" class="cleaners-radio" value="2" v-model="cleaners"></div>
-                                                </div>
+                                                <order-cleaner v-for="cleaner in cleaners" :key="cleaner.id" v-bind:cleaner="cleaner" @change="selectCleaners"></order-cleaner>
                                             </div>
                                         </fieldset>
                                     </div>
@@ -352,12 +253,12 @@
                         </div>
                         <div class="tb-panel-body">
                             <h3>Hourly Price:
-                                <!--<span id="hourly-price" v-text="hourlyPrice"></span>-->
-                                <span id="hourly-price"></span>
+                                <span id="hourly-price" v-text="hourlyPrice"></span>
+                                <!--<span id="hourly-price"></span>-->
                             </h3>
                             <h4>Package:
                                 <!--<span v-text="package"></span>-->
-                                <span></span>
+                                <span>{{ selectedPackage }}</span>
                             </h4>
                             <div class="tb-row">
                                 <div class="tb-col-sm-8">Detergents</div><div class="tb-col-sm-4" v-text="equipment.detergents"></div>
@@ -381,22 +282,50 @@
 <script src="https://unpkg.com/flatpickr"></script>
 <style>
 
-    @media (min-width: 768px) and (max-width: 991px) {
+    @media (min-width: 768px) and (max-width: 980px) { /* This is not a breakpoint from bootstrap, but Divi!! */
         .sticky-order-summary {
             position: fixed;
             top: 210px; /* may need to be adjusted later if sth in the Divi theme changes */
         }
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 981px) { /* This is not a breakpoint from bootstrap, but Divi!! */
         .sticky-order-summary {
             position: fixed;
-            top: 196px; /* may need to be adjusted later if sth in the Divi theme changes */
+            top: 170px; /* may need to be adjusted later if sth in the Divi theme changes */
         }
     }
 </style>
 <script>
+
     jQuery(document).ready(function ($) {
+
+        // make the menu sticky on the booking page (do not allow it to vary in height)
+
+        var menuHeader = document.getElementById('main-header');
+
+        // 1. on load
+        
+        $(menuHeader).addClass('et-fixed-header'); 
+
+        // 2. overwrite the changes in class done by Divi there
+
+        // create an observer instance
+        var menuHeaderObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                // menuHeader.className += " et-fixed-header";
+                $(menuHeader).addClass('et-fixed-header');
+            });    
+        });
+        
+        // configuration of the observer:
+        var menuHeaderMutationConfig = { attributeFilter: ['class']};
+        
+        // pass in the target node, as well as the observer options
+        menuHeaderObserver.observe(menuHeader, menuHeaderMutationConfig);
+
+        // end of making the menu sticky
+
         $(function () {
             $(".package-radio").checkboxradio({
                 icon: false
@@ -505,6 +434,34 @@
 </script>
 <script>
 
+    Vue.component('order-equipment',{
+        props: ['equipment'],
+        template:
+            `
+                <div class="tb-row">
+                    <order-equipment-item v-for="item in equipment" :key="item.id" v-bind:item="item"></order-equipment-item>
+                </div>
+            `
+    });
+
+    Vue.component('order-equipment-item', {
+        props: ['item'],
+        template: 
+            `
+            <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-12">
+                <div class="tb-form-group">
+                    <label v-bind:for="'equipment-'+item.key">
+                        <div class="equipment-inner-wrapper">
+                            <h4><img v-bind:src="item.icon"
+                                    class="order-form-icon"></h4>
+                            <p class="order-form-equipment-callout">{{ item.name }}</p>
+                        </div>
+                    </label>
+                    <input type="checkbox" name="equipment-checkbox" v-bind:id="'equipment-'+item.key" class="equipment-checkbox" v-model="item.selected"></div>
+            </div>>
+            `
+    });    
+
     Vue.component('order-extras',{
         props: ['extras'],
         template:
@@ -533,20 +490,10 @@
             `
     });
 
-    Vue.component('order-packages',{
-        props: ['packages'],
-        template:
-            `
-                <div class="tb-row">
-                    <order-package v-for="package in packages" :key="package.id" v-bind:package="package"></order-package>
-                </div>
-            `
-    });
-
     Vue.component('order-package', {
         props: ['package'],
         template: 
-            `
+        `
             <div class="tb-col-tn-6 tb-col-xs-6 tb-col-sm-4">
                 <div class="tb-form-group">
                     <label v-bind:for="'package-'+package.key" class="package-radio-label">
@@ -560,10 +507,47 @@
                             <p class="order-form-package-callout" v-text="package.callout"></p>
                         </div>
                     </label>
-                    <input type="radio" name="package-radio" v-bind:id="'package-'+package.key" class="package-radio" value="regel" v-model="package.selected">
+                    <input type="radio" name="package-radio" v-bind:id="'package-'+package.key" class="package-radio" :value="package.key" v-model="selectedPackageValue">
                 </div>
             </div>
+        `,
+        computed: {
+            selectedPackageValue: {
+                get() {
+                    return this.value;
+                },
+                set() {
+                    this.$emit("change", this.package.key);
+                }
+            }
+        }
+    });
+
+    Vue.component('order-cleaner', {
+        props: ['cleaner'],
+        template: 
             `
+            <div class="tb-col-tn-6 tb-col-xs-12 tb-col-sm-12">
+                <div class="tb-form-group">
+                    <label v-bind:for="'cleaners-'+cleaner.key" class="cleaners-radio-label">
+                        <div class="cleaners-inner-wrapper">
+                            <h4><img v-for="n in cleaner.key" v-bind:src="cleaner.icon" class=\"order-form-icon\"></h4>
+                            <p class="order-form-cleaners-callout"><strong>{{ cleaner.name }}</strong>{{ cleaner.callout }}</p>
+                        </div>
+                    </label>
+                    <input type="radio" name="cleaners-radio"  v-bind:id="'cleaners-'+cleaner.key" class="cleaners-radio" value="cleaner.key" v-model="selectedCleanersValue"></div>
+            </div>
+            `,
+        computed: {
+            selectedCleanersValue: {
+                get() {
+                    return this.value;
+                },
+                set() {
+                    this.$emit("change", this.cleaner.key);
+                }
+            }
+        }
     });
 
     var pricing = {
@@ -580,51 +564,64 @@
             stickyOrderSummary: {
                 width: 1
             },
+            selectedPackage: '',
+            selectedCleaners: '',
             packages: [
                 {
                     id: '1',
                     key: 'regel',
                     name: 'REGELMÄßIGE REINIGUNG',
-                    callout: 'For regular customers only',
-                    selected: false
+                    callout: 'For regular customers only'
                 },
                 {
                     id: '2',
                     key: 'prima',
                     name: 'PRIMA REINIGUNG',
-                    callout: 'Lorem ipsum dolor sit amet',
-                    selected: false
+                    callout: 'Lorem ipsum dolor sit amet'
                 },
                 {
                     id: '3',
                     key: 'umzuege',
                     name: 'UMZÜGE REINIGUNG',
-                    callout: 'Lorem ipsum dolor sit amet',
-                    selected: false
+                    callout: 'Lorem ipsum dolor sit amet'
                 },
                 {
                     id: '4',
                     key: 'party',
                     name: 'PARTY REINIGUNG',
-                    callout: 'Lorem ipsum dolor sit amet',
-                    selected: false
+                    callout: 'Lorem ipsum dolor sit amet'
                 },
                 {
                     id: '5',
                     key: 'allergie',
                     name: 'ALLERGIE REINIGUNG',
-                    callout: 'Lorem ipsum dolor sit amet',
-                    selected: false
+                    callout: 'Lorem ipsum dolor sit amet'
                 },
                 {
                     id: '6',
                     key: 'buero',
                     name: 'BÜRO REINIGUNG',
-                    callout: 'Lorem ipsum dolor sit amet',
-                    selected: false
+                    callout: 'Lorem ipsum dolor sit amet'
                 },
             ],
-            cleaners: '',
+            cleaners: [
+                {
+                    id: '1',
+                    key: 1,
+                    name: '1',
+                    callout: ' cleaning professional',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg',
+                    selected: false
+                },
+                {
+                    id: '2',
+                    key: 2,
+                    name: '2',
+                    callout: ' cleaning professionals',
+                    icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/cleaner-person.svg',
+                    selected: false
+                }
+            ],
             equipment: {
                 detergents: false,
                 mop: false,
@@ -674,12 +671,36 @@
                     icon: 'http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/sas-assets/icons/laundry-two-shirts.svg',
                     selected: false
                 }
+            ],
+            equipment:
+            [
+                {
+                    id: '1',
+                    key: 'detergents',
+                    name: 'Cleaning Supplies',
+                    icon: '',
+                    selected: false
+                },
+                {
+                    id: '2',
+                    key: 'mop',
+                    name: 'Mop',
+                    icon: '',
+                    selected: false
+                },
+                {
+                    id: '3',
+                    key: 'vacuum',
+                    name: 'Vacuum Cleaner',
+                    icon: '',
+                    selected: false
+                }
             ]
         },
         computed: {
-            /* hourlyPrice: function () {
+            hourlyPrice: function () {
                 var packagePrice = ['', ''];
-                switch (this.package) {
+                switch (this.selectedPackage) {
                     case 'regel':
                         packagePrice = pricing.regel;
                         break;
@@ -698,22 +719,24 @@
                     case 'buero':
                         packagePrice = pricing.buero;
                         return packagePrice[0];
-                        break;
                     default:
                         return '';
                 }
-                switch (this.cleaners) {
-                    case '1':
+                switch (this.selectedCleaners) {
+                    case 1:
                         packagePrice = packagePrice[0];
                         break;
-                    case '2':
+                    case 2:
                         packagePrice = packagePrice[1];
                         break;
                     default:
                         return '';
                 }
                 return '€' + packagePrice + ' /cleaner';
-            },*/
+            },
+            selectedCleaner: function() {
+                return this.cleaners.filter(cleaner => cleaner.selected)[0];
+            },
             selectedExtras: function() {
                 return this.extras.filter(extra => extra.selected);
             }
@@ -725,6 +748,14 @@
             }, */
             handleResize () {
                 this.stickyOrderSummary.width = document.getElementById('order-summary-column').offsetWidth - 30; // remember about padding
+            },
+            selectPackage(val) {
+                console.log('selectPackage fired');
+                this.selectedPackage = val;
+            },
+            selectCleaners(val) {
+                console.log('selectCleaners fired');
+                this.selectedCleaners = val;
             }
         },
         created() {

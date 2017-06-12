@@ -1,0 +1,111 @@
+<section class="bootstrap-iso cleaner-application-form">
+  <div class="cleaner-application-form-wrapper tb-container">
+    <h1 class="tb-text-center">Fill out the application form</h1>
+    <div class="tb-form-horizontal">
+      <div class="tb-form-group">
+        <label for="salutation" class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Salutation</label>
+        <div class="tb-col-xs-12 tb-col-sm-3 tb-col-md-2">
+          [select* salutation id:salutation class:tb-form-control include_blank "Mr." "Mrs." "Ms."]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <label for="tb-first-name" class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">First Name</label>
+        <div class="tb-col-xs-12 tb-col-sm-6 tb-col-md-9">
+          [text* first-name id:first-name class:tb-form-control placeholder "First Name"]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <label for="last-name" class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Last Name</label>
+        <div class="tb-col-xs-12 tb-col-sm-6 tb-col-md-9">
+          [text* last-name id:last-name class:tb-form-control placeholder "Last Name"]
+        </div>
+      </div>
+       <div class="tb-form-group">
+        <label for="email" class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Email</label>
+        <div class="tb-col-xs-12 tb-col-sm-6 tb-col-md-9">
+          [email* email id:email class:tb-form-control placeholder "Email"]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <label for="phone-number" class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Phone Number</label>
+        <div class="tb-col-xs-12 tb-col-sm-6 tb-col-md-9">
+          [text phone-number id:phone-number class:tb-form-control placeholder "Phone Number"]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <label for="is-registered-business" class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Are you already a registerd business (Gewerbe)?</label>
+        <div class="tb-col-xs-12 tb-col-sm-3 tb-col-md-2">
+          [select* is-registered-business id:is-registered-business class:tb-form-control include_blank "Yes" "No"]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <label for="application-reason-textarea" class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Why do you want to work with SPIC&nbsp;AND&nbsp;SPAN.?</label>
+        <div class="tb-col-xs-12 tb-col-sm-9 tb-col-md-9">
+          [textarea* application-reason-textarea id:application-reason-textarea class:tb-form-control class:tb-textarea x8 placeholder "I want to work with SPIC AND SPAN. because..."]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <div class="tb-col-xs-12 tb-col-md-offset-3 tb-col-md-9">
+          <hr>
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <div class="tb-col-xs-12 tb-col-md-offset-3 tb-col-md-9"><p class="application-form-explanation">The files mentioned below are not obligatory at this stage of the application. However, if you upload them right now, we will be able to process your application <em>much</em> faster. If you have only some of the documents (e.g. only your photo), upload them and we will ask you for the missing ones later.</p></div>
+      </div>
+      <div class="tb-form-group">
+        <p class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Your photo</p>
+        <div class="tb-col-xs-12 tb-col-sm-9 tb-col-md-9 horizontal-form-file-input-wrapper">
+          [file doc-photo limit:2mb filetypes:png|jpg|jpeg id:doc-photo]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <p class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Police check</p>
+        <div class="tb-col-xs-12 tb-col-sm-9 tb-col-md-9 horizontal-form-file-input-wrapper">
+          [file doc-police-check limit:4mb filetypes:pdf|jpg|jpeg|png id:doc-police-check]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <p class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Gewerbeschein</p>
+        <div class="tb-col-xs-12 tb-col-sm-9 tb-col-md-9 horizontal-form-file-input-wrapper">
+          [file doc-gewerbeschein limit:4mb filetypes:pdf|jpg|jpeg|png id:doc-gewerbeschein]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <p class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Steuer Id</p>
+        <div class="tb-col-xs-12 tb-col-sm-9 tb-col-md-9 horizontal-form-file-input-wrapper">
+          [file doc-steuer-id limit:4mb filetypes:pdf|jpg|jpeg|png id:doc-steuer-id]
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <p class="tb-col-xs-12 tb-col-sm-3 tb-col-md-3 tb-control-label">Insurance Certificate</p>
+        <div class="tb-col-xs-12 tb-col-sm-9 tb-col-md-9 horizontal-form-file-input-wrapper">
+          [file doc-insurance limit:4mb filetypes:pdf|jpg|jpeg|png id:doc-insurance]
+        </div>
+      </div>
+       <div class="tb-form-group">
+        <div class="tb-col-xs-12 tb-col-offset-sm-3 tb-col-sm-9 tb-col-md-offset-3 tb-col-md-9">
+          <div class="tb-checkbox">
+
+          <div class="form-acceptance-checkbox-wrapper">[acceptance checkbox-terms id:checkbox-terms]</div><div class="form-acceptance-text-wrapper"> I agree to lorem ipsum dolor sit amet, consectetur <a>adipiscing elit</a>. Fusce rhoncus risus sed consequat tristique. Proin <a>non commodo</a> dolor, in imperdiet dui.</div>
+          </div>
+        </div>
+      </div>
+      <div class="tb-form-group">
+        <div class="tb-col-xs-12 tb-col-md-offset-3 tb-col-md-9">
+          <button type="submit" class="tb-btn tb-btn-default wpcf7-submit">Apply now</button>
+        </div>
+      </div>
+      <div>
+        [response]
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+jQuery("#phone-number").intlTelInput({
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.13/js/utils.js",
+  autoPlaceholder: "aggressive",
+  initialCountry: "de",
+  preferredCountries: ["de", "us", "gb", "it", "se", "no"]
+});
+</script>

@@ -385,4 +385,11 @@ ORDER FORM
   padding-right: 0.5em;
   color: #8b8b8b; }
 
+.no-transition {
+  -webkit-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -o-transition-property: none !important;
+  transition-property: none !important;
+  transform: none !important; }
+
 /*# sourceMappingURL=style.css.map */
