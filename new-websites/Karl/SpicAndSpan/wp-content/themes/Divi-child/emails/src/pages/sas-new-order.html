@@ -1,0 +1,98 @@
+---
+subject: My Welcome Email Template Subject
+---
+
+<container class="header">
+  <row>
+    <columns>
+      <h1 class="text-center">Thank you for your order</h1>
+
+    </columns>
+  </row>
+</container>
+
+<container class="body-border">
+  <row>
+    <columns>
+
+      <spacer size="32"></spacer>
+
+      <center>
+        <img src="http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/2017/03/spic-and-span-logo.png" height="200" width="200">
+      </center>
+
+      <spacer size="16"></spacer>
+      <!-- 
+        ********************************
+        Welcome message
+        *********************************
+      -->
+      <h4>We're just assigning the perfect cleaning team for you!</h4>
+      <p>Dear <?php echo $mail->data['customer_name']; ?>,<br><br>
+        That you for ordering <span class="sas-black"><span class="sas-before-dot sas-wrap-normal">SPIC AND SPAN</span><span class="sas-after-dot">.</span></span> services. You will receive the final booking comfirmation once the deposit for the first our of cleaning is made.
+      </p>
+    </columns>
+  </row>
+  <!-- 
+    ********************************
+    Request summary table
+    *********************************
+   -->
+  <row>
+    <columns>
+        <h4>Order Details</h4>
+        <hr />
+        <table>
+          <tr><td colspan="2"><b>Service Ordered</b></td></tr>
+          <tr><td>Package</td><td><?php echo $mail->data['package']; ?></td></tr>
+          <tr><td>Date &amp; Time</td><td><?php echo $mail->data['date']; ?> @ <?php echo $mail->data['time']; ?></td></tr>
+          <tr><td>Hourly rate</td><td><?php echo (is_numeric($mail->data['hourlyPricePerCleaner']) ? '€' : '') . ($mail->data['hourlyPricePerCleaner']) . (($mail->data['hourlyPricePerCleaner'] > 1)&&is_numeric($mail->data['hourlyPricePerCleaner']) ? ' /cleaner' : ''); ?></td></tr>
+          <tr><td colspan="2"><b>Cleaning Equipment</b></td></tr>
+          <tr><td>Cleaning Solvents</td><td><?php echo in_array('detergents',$mail->data['equipment']) ? 'Available on premises' : 'Provided by a cleaner'; ?></td></tr>
+          <tr><td>Vacuum Cleaner</td><td><?php echo in_array('vacuum',$mail->data['equipment']) ? 'Available on premises' : 'Provided by a cleaner (+€10)'; ?></td></tr>
+          <tr><td>Mop</td><td><?php echo in_array('mop',$mail->data['equipment']) ? 'Available on premises' : 'Provided by a cleaner (+€10)'; ?></td></tr>
+          <?php if($mail->data['extras']!=[]) { ?>
+          <tr><td colspan="2"><b>Special Requests</b></td></tr>
+          <?php foreach($mail->data['extras'] as $extra) { ?>
+          <tr><td><?php echo $extra; ?></td><td>Included in price</td></tr>      
+          <?php } ?>   
+          <?php } ?>   
+        </table>
+        <hr />
+    </columns>
+  </row>
+    <!-- 
+    ********************************
+    Closing message
+    *********************************
+   -->
+  <row>
+    <columns small="12">
+      <p>Should you have any further questions, please do not hesitate to contact us. Our customer support is there for you 24 hours a day, 7 days a week. You can send us an email to info@spicandspan.de or call us at +49769869876 or +4969869876.</p>
+      <spacer size="16"></spacer>
+      <p>Best Regards,<br><br><span class="sas-black"><span class="sas-before-dot sas-wrap-normal">SPIC AND SPAN</span><span class="sas-after-dot">.TEAM</span></span></p>
+    </columns>
+  </row>
+  <spacer size="16"></spacer>
+  <row>
+    <columns>
+      <center>
+        <menu>
+          <p class="text-center">Find us on:</p>
+          <item href="http://zurb.com"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" height="24" width="24" class=""></item>
+          <item href="http://zurb.com"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" height="24" width="24" class=""></item>
+          <item href="http://zurb.com"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png" height="24" width="24" class=""></item>
+        </menu>
+      </center>
+    </columns>
+  </row>
+  <wrapper class="secondary">
+
+    <spacer size="16"></spacer>
+    <row>
+      <columns>
+        <p class="text-center">EU Headquarters:<br><br>Sepapaja 6<br>Tallinn 15551<br>Estonia<br>Reg. 14080385</p>
+      </columns>
+    </row>
+  </wrapper>
+</container>

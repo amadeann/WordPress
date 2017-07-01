@@ -12,6 +12,7 @@ $sas-yellow: rgb(241, 210, 4);
 $sas-aqua: #7ebeC5;
 $sas-pink: #ef6462;
 $sas-navy: #283139;
+$sas-gray: #bbbbbb;
 
 $twitterBootstrapPrefix: "tb";
 
@@ -90,6 +91,12 @@ $twitterBootstrapPrefix: "tb";
 .sas-black {
     font-weight: bold;
     color: #000000;
+    text-transform: uppercase;
+}
+
+.sas-white {
+    font-weight: bold;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -470,13 +477,17 @@ ORDER FORM
     padding-right: 0.5em;
 }
 
-.order-form .feature-list {
-    list-style: none;
-    vertical-align: top;
+.order-form .features {
     margin: 50px 0;
 }
 
-.order-form .title {
+.order-form .feature-list {
+    list-style: none;
+    vertical-align: top;
+}
+
+.order-form .title,
+.order-form .subtitle {
     text-align: center;
 }
 
@@ -501,4 +512,243 @@ ORDER FORM
     -o-transition-property: none!important;
     transition-property: none!important;
     transform: none!important;
+}
+
+.order-breadcrumb-list-wrapper {
+    text-align: center;
+}
+
+.sas-breadcrumb {
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.sas-breadcrumb > li {
+  display: inline-block;
+  color: $sas-gray;
+  cursor: pointer;
+}
+
+.sas-breadcrumb > li > a {
+  color: $sas-gray;
+  cursor: pointer;
+}
+
+.sas-breadcrumb > li > a:hover,
+.sas-breadcrumb > li > a:focus {
+  color: $sas-gray;
+  text-decoration: none;
+}
+
+.sas-breadcrumb > li + li:before {
+  content: ">";
+  padding: 0 5px;
+  color: $sas-gray;
+}
+.sas-breadcrumb > .tb-active {
+  color: $sas-yellow;
+}
+
+// Styling buttons in Spic And Span colors (equivalent of btn-primary)
+
+.bootstrap-iso .btn-sas-yellow {
+  color: #fff;
+  background-color: $sas-yellow;
+  border-color: darken($sas-yellow,2%);
+}
+.bootstrap-iso .btn-sas-yellow:focus,
+.bootstrap-iso .btn-sas-yellow.tb-focus {
+  color: #fff;
+  background-color: limegreen;
+  border-color: darken(limegreen,5%);
+}
+.bootstrap-iso .btn-sas-yellow:hover {
+  color: #fff;
+  background-color: limegreen;
+  border-color: darken(limegreen,2%);
+}
+.bootstrap-iso .btn-sas-yellow:active,
+.bootstrap-iso .btn-sas-yellow.tb-active,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow {
+  color: #fff;
+  background-color: limegreen;
+  border-color: darken(limegreen,2%);
+}
+.bootstrap-iso .btn-sas-yellow:active:hover,
+.bootstrap-iso .btn-sas-yellow.tb-active:hover,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow:hover,
+.bootstrap-iso .btn-sas-yellow:active:focus,
+.bootstrap-iso .btn-sas-yellow.tb-active:focus,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow:focus,
+.bootstrap-iso .btn-sas-yellow:active.tb-focus,
+.bootstrap-iso .btn-sas-yellow.tb-active.tb-focus,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow.tb-focus {
+  color: #fff;
+  background-color: limegreen;
+  border-color: darken(limegreen,5%);
+}
+.bootstrap-iso .btn-sas-yellow:active,
+.bootstrap-iso .btn-sas-yellow.tb-active,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow {
+  background-image: none;
+}
+.bootstrap-iso .btn-sas-yellow.tb-disabled:hover,
+.bootstrap-iso .btn-sas-yellow[disabled]:hover,
+fieldset[disabled] .bootstrap-iso .btn-sas-yellow:hover,
+.bootstrap-iso .btn-sas-yellow.tb-disabled:focus,
+.bootstrap-iso .btn-sas-yellow[disabled]:focus,
+fieldset[disabled] .bootstrap-iso .btn-sas-yellow:focus,
+.bootstrap-iso .btn-sas-yellow.tb-disabled.tb-focus,
+.bootstrap-iso .btn-sas-yellow[disabled].tb-focus,
+fieldset[disabled] .bootstrap-iso .btn-sas-yellow.tb-focus {
+  background-color: $sas-yellow;
+  border-color: darken($sas-yellow,2%);
+}
+.bootstrap-iso .btn-sas-yellow .tb-badge {
+  color: $sas-yellow;
+  background-color: #fff;
+}
+
+.order-form .order-summary h3,
+.order-form .order-summary h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.order-form .order-summary ul {
+    font-size: 12px;
+    line-height: 1.7em;
+    padding-bottom: 0;
+}
+
+.order-form .order-summary #hourly-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-form .flatpickr-input[readonly] {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/*
+** Custom top header bar with contact details
+*/
+
+.sas-top-header {
+    background-color: black;
+}
+
+.sas-top-header .sas-text-logo {
+    display: block;
+    float: left;
+    padding: 8px 15px;
+    line-height: 26px;
+    font-weight: bold;
+    margin-left: -15px;
+}
+
+.sas-top-header .header-contact-details{
+    text-align: right;
+}
+
+.sas-top-header .header-contact-details-inner {
+    display: block;
+    padding: 8px 15px;
+    line-height: 26px;
+    color: white;
+}
+
+// Hide phone number in the header on smaller laptops
+
+@media (max-width: 1199px) {
+    .header-contact-details .phone {
+        display: none !important;
+    }
+}
+
+// Hide email address in the header on tablets
+
+@media (max-width: 991px) {
+    .header-contact-details .email {
+        display: none !important;
+    }
+
+}
+
+// Center the contact details and Spic And Span logo
+
+@media (max-width: 767px) {
+    .sas-top-header .header-logo,
+    .sas-top-header .header-contact-details {
+        text-align: center;
+    }
+
+    .sas-top-header .sas-text-logo {
+        display: block;
+        float: none;
+        margin: auto;
+        padding: 8px 15px;
+        line-height: 26px;
+        font-weight: bold;
+    }
+
+    .sas-top-header .header-contact-details{
+        text-align: center;
+    }
+
+    .sas-top-header .header-contact-details-inner {
+        padding-top: 0;
+    }
+}
+
+.sas-order {
+    background-color:rgba($sas-aqua,0.09);
+}
+
+.order-confirmation h1,
+.order-confirmation h2 {
+    text-align: center;
+}
+
+.order-confirmation-hero-image {
+  background-image: url(http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/2017/07/apartment_clean_kitchen_compressed_1280_724.jpg);
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// .hero-image-overlay:before{
+//   position: absolute;
+//   content:" ";
+//   top:0;
+//   left:0;
+//   width:100%;
+//   height:100%;
+//   z-index:0;
+//   display: block;
+// }
+
+.order-confirmation-hero-image:before {
+  background-color: rgba(255,255,255,0.90);
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  display: block;
+}
+
+.order-confirmation .sas-panel {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }

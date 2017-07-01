@@ -1,0 +1,29 @@
+$sas-yellow: rgb(241, 210, 4);
+
+.right-border {
+    border-right: 1px solid black;
+}
+
+.sas-black {
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.sas-white {
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.sas-before-dot {
+    white-space: nowrap;
+}
+
+.sas-after-dot {
+    color: #ffde00;
+}
+
+.sas-wrap-normal {
+    white-space: normal !important;
+}

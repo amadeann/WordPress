@@ -65,6 +65,11 @@
   color: #000000;
   text-transform: uppercase; }
 
+.sas-white {
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase; }
+
 .sas-before-dot {
   white-space: nowrap; }
 
@@ -365,12 +370,15 @@ ORDER FORM
   width: 3em;
   padding-right: 0.5em; }
 
-.order-form .feature-list {
-  list-style: none;
-  vertical-align: top;
+.order-form .features {
   margin: 50px 0; }
 
-.order-form .title {
+.order-form .feature-list {
+  list-style: none;
+  vertical-align: top; }
+
+.order-form .title,
+.order-form .subtitle {
   text-align: center; }
 
 .order-form .feature-list .feature {
@@ -391,5 +399,191 @@ ORDER FORM
   -o-transition-property: none !important;
   transition-property: none !important;
   transform: none !important; }
+
+.order-breadcrumb-list-wrapper {
+  text-align: center; }
+
+.sas-breadcrumb {
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  list-style: none; }
+
+.sas-breadcrumb > li {
+  display: inline-block;
+  color: #bbbbbb;
+  cursor: pointer; }
+
+.sas-breadcrumb > li > a {
+  color: #bbbbbb;
+  cursor: pointer; }
+
+.sas-breadcrumb > li > a:hover,
+.sas-breadcrumb > li > a:focus {
+  color: #bbbbbb;
+  text-decoration: none; }
+
+.sas-breadcrumb > li + li:before {
+  content: ">";
+  padding: 0 5px;
+  color: #bbbbbb; }
+
+.sas-breadcrumb > .tb-active {
+  color: #f1d204; }
+
+.bootstrap-iso .btn-sas-yellow {
+  color: #fff;
+  background-color: #f1d204;
+  border-color: #e7c904; }
+
+.bootstrap-iso .btn-sas-yellow:focus,
+.bootstrap-iso .btn-sas-yellow.tb-focus {
+  color: #fff;
+  background-color: limegreen;
+  border-color: #2db92d; }
+
+.bootstrap-iso .btn-sas-yellow:hover {
+  color: #fff;
+  background-color: limegreen;
+  border-color: #30c530; }
+
+.bootstrap-iso .btn-sas-yellow:active,
+.bootstrap-iso .btn-sas-yellow.tb-active,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow {
+  color: #fff;
+  background-color: limegreen;
+  border-color: #30c530; }
+
+.bootstrap-iso .btn-sas-yellow:active:hover,
+.bootstrap-iso .btn-sas-yellow.tb-active:hover,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow:hover,
+.bootstrap-iso .btn-sas-yellow:active:focus,
+.bootstrap-iso .btn-sas-yellow.tb-active:focus,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow:focus,
+.bootstrap-iso .btn-sas-yellow:active.tb-focus,
+.bootstrap-iso .btn-sas-yellow.tb-active.tb-focus,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow.tb-focus {
+  color: #fff;
+  background-color: limegreen;
+  border-color: #2db92d; }
+
+.bootstrap-iso .btn-sas-yellow:active,
+.bootstrap-iso .btn-sas-yellow.tb-active,
+.tb-open > .tb-dropdown-toggle.bootstrap-iso .btn-sas-yellow {
+  background-image: none; }
+
+.bootstrap-iso .btn-sas-yellow.tb-disabled:hover,
+.bootstrap-iso .btn-sas-yellow[disabled]:hover,
+fieldset[disabled] .bootstrap-iso .btn-sas-yellow:hover,
+.bootstrap-iso .btn-sas-yellow.tb-disabled:focus,
+.bootstrap-iso .btn-sas-yellow[disabled]:focus,
+fieldset[disabled] .bootstrap-iso .btn-sas-yellow:focus,
+.bootstrap-iso .btn-sas-yellow.tb-disabled.tb-focus,
+.bootstrap-iso .btn-sas-yellow[disabled].tb-focus,
+fieldset[disabled] .bootstrap-iso .btn-sas-yellow.tb-focus {
+  background-color: #f1d204;
+  border-color: #e7c904; }
+
+.bootstrap-iso .btn-sas-yellow .tb-badge {
+  color: #f1d204;
+  background-color: #fff; }
+
+.order-form .order-summary h3,
+.order-form .order-summary h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px; }
+
+.order-form .order-summary ul {
+  font-size: 12px;
+  line-height: 1.7em;
+  padding-bottom: 0; }
+
+.order-form .order-summary #hourly-price {
+  font-size: 18px;
+  font-weight: bold; }
+
+.order-form .flatpickr-input[readonly] {
+  background-color: #fff;
+  opacity: 1; }
+
+/*
+** Custom top header bar with contact details
+*/
+.sas-top-header {
+  background-color: black; }
+
+.sas-top-header .sas-text-logo {
+  display: block;
+  float: left;
+  padding: 8px 15px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-left: -15px; }
+
+.sas-top-header .header-contact-details {
+  text-align: right; }
+
+.sas-top-header .header-contact-details-inner {
+  display: block;
+  padding: 8px 15px;
+  line-height: 26px;
+  color: white; }
+
+@media (max-width: 1199px) {
+  .header-contact-details .phone {
+    display: none !important; } }
+@media (max-width: 991px) {
+  .header-contact-details .email {
+    display: none !important; } }
+@media (max-width: 767px) {
+  .sas-top-header .header-logo,
+  .sas-top-header .header-contact-details {
+    text-align: center; }
+
+  .sas-top-header .sas-text-logo {
+    display: block;
+    float: none;
+    margin: auto;
+    padding: 8px 15px;
+    line-height: 26px;
+    font-weight: bold; }
+
+  .sas-top-header .header-contact-details {
+    text-align: center; }
+
+  .sas-top-header .header-contact-details-inner {
+    padding-top: 0; } }
+.sas-order {
+  background-color: rgba(126, 190, 197, 0.09); }
+
+.order-confirmation h1,
+.order-confirmation h2 {
+  text-align: center; }
+
+.order-confirmation-hero-image {
+  background-image: url(http://serwer16331.lh.pl/karl/spicandspan/wp-content/uploads/2017/07/apartment_clean_kitchen_compressed_1280_724.jpg);
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.order-confirmation-hero-image:before {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block; }
+
+.order-confirmation .sas-panel {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,40 +1,22 @@
-<section class="bootstrap-iso order-form" id="order-form" style="background-color:rgba(126,190,197,0.09);">
-    <div class="tb-container-fluid">
-        <div class="tb-row sas-top-header">
-            <div class="tb-col-xs-12 tb-col-sm-6 tb-col-md-4 header-logo">
-                <div class="tb-clearfix">
-                    <a class="sas-text-logo">
-                        <span class="sas-white">
-                            <span class="sas-before-dot sas-wrap-normal">SPIC AND SPAN</span><span class="sas-after-dot">.BOOK CLEANING</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="tb-col-xs-12 tb-col-sm-6 tb-col-md-8 header-contact-details">
-                <div class="tb-clearfix">
-                    <div class="header-contact-details-inner">
-                        <h4 style="display: inline-block; font-size: 1em; padding-bottom: 0; margin-top: 0; margin-bottom:0; padding-right: 5px;">24/7 customer support: </h4>
-                        <ul class="tb-list-inline" style="display: inline-block; padding-bottom: 0; margin-bottom:0;">
-                            <li class="email"><i class="fa fa-envelope" aria-hidden="true" style="padding-right: 5px;"></i>info@spicandspan.de</li>
-                            <li class="mobile"><i class="fa fa-mobile" aria-hidden="true" style="padding-right: 5px;"></i>+49 174 130 45 02</li>
-                            <li class="phone"><i class="fa fa-phone" aria-hidden="true" style="padding-right: 5px;"></i>+49 30 2886 7985</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tb-row">
-            <div class="tb-col-xs-12">
-                <div class="order-breadcrumb-list-wrapper">
-                    <ol class="sas-breadcrumb" style="background-color: transparent">
-                        <li><a href="#">1. Start</a></li>
-                        <li class="tb-active">2. Booking</li>
-                        <li>3. Confirmation</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php
+/*
+Template Name: SAS Order Form
+*/
+
+
+// Custom header has to be loaded relative to the folder with the style.css
+// check the locate_template() source below to find out why
+// https://core.trac.wordpress.org/browser/tags/4.8/src/wp-includes/template.php#L0
+get_header('order-form'); ?>
+
+<div class="bootstrap-iso order-form sas-order" id="order-form">
+    
+    <!-- Include the breadcrumbs-->
+
+    <?php include dirname(__FILE__) . '/partials/order-form-breadcrumbs.php'; ?>
+
+    <!-- /Include the breadcrumbs-->
+
     <div class="order-form-wrapper tb-container">
         <div class="tb-row">
             <div class="tb-col-sm-8">
@@ -233,7 +215,7 @@
                                                             <span>&nbsp;sqm</span>
                                                         </span>
                                                     </div>
-                                                    <div id="soft" class="tb-form-group"></div>
+                                                    <div id="property-size-slider" class="tb-form-group"></div>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -372,7 +354,7 @@
                                     <legend>Date &amp; Time</legend>
                                     <div class="tb-row">
                                         <!-- Date -->
-                                        <div class="tb-col-tn-12 tb-col-xs-12 tb-col-sm-6">
+                                        <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-6">
                                             <div class="tb-form-group">
                                                 <div class="tb-input-group">
                                                     <span class="tb-input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -382,7 +364,7 @@
                                         </div>
                                         <!-- End Date -->
                                         <!-- Time -->
-                                        <div class="tb-col-tn-12 tb-col-xs-12 tb-col-sm-6">
+                                        <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-6">
                                             <div class="tb-form-group">
                                                 <div class="tb-input-group">
                                                     <span class="tb-input-group-addon"><i class="fa fa-clock-o"></i></span>
@@ -410,7 +392,7 @@
                                         <div class="tb-col-tn-12 tb-col-xs-6 tb-col-sm-4">
                                             <div class="tb-form-group">
                                                 <select class="tb-form-control" id="salutation" name="salutation">
-                                                    <option value="Mr.">---</option>
+                                                    <option value="" disabled selected>Salutation</option>
                                                     <option value="Mr.">Mr.</option>
                                                     <option value="Mrs.">Mrs.</option>
                                                     <option value="Ms.">Ms.</option>
@@ -550,7 +532,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.0.0/nouislider.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.0.0/nouislider.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.js"></script>
@@ -574,9 +556,6 @@
     }
 </style>
 <script>
-    // hide main header
-
-    // document.getElementById('main-header').style.display = 'none';;
 
     jQuery(document).ready(function ($) {
 
@@ -590,54 +569,13 @@
             }
         });
 
-        /*
-        // make the menu sticky on the booking page (do not allow it to vary in height)
-
-        var menuHeader = document.getElementById('main-header');
-
-        // 1. on load
-        
-        $(menuHeader).addClass('et-fixed-header'); 
-
-        // 2. overwrite the changes in class done by Divi there
-
-        // create an observer instance
-        var menuHeaderObserver = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                // menuHeader.className += " et-fixed-header";
-                $(menuHeader).addClass('et-fixed-header');
-            });    
-        });
-        
-        // configuration of the observer:
-        var menuHeaderMutationConfig = { attributeFilter: ['class']};
-        
-        // pass in the target node, as well as the observer options
-        menuHeaderObserver.observe(menuHeader, menuHeaderMutationConfig);
-
-        // end of making the menu sticky
-
-        */
 
         $(function () {
-            $(".package-radio").checkboxradio({
-                icon: false
-            });
-            $(".cleaners-radio").checkboxradio({
-                icon: false
-            });
-            $(".property-size-radio").checkboxradio({
-                icon: false
-            });
-            $(".equipment-checkbox").checkboxradio({
-                icon: false
-            });
-            // $(".extras-checkbox").checkboxradio({
-            //     icon: false
-            // });
-            $(".extras-checkbox").aaCheckboxradio({
-                icon: false
-            });
+            $(".package-radio").checkboxradio({ icon: false });
+            $(".cleaners-radio").checkboxradio({ icon: false });
+            $(".property-size-radio").checkboxradio({ icon: false });
+            $(".equipment-checkbox").checkboxradio({ icon: false });
+            $(".extras-checkbox").aaCheckboxradio({ icon: false });
         });
 
         var packageFieldsetIndicator = $('.package-fieldset-completed');
@@ -654,24 +592,19 @@
             cleanersFieldsetIndicator.addClass('tb-show').removeClass('tb-hidden');
         });
 
-        $('.property-size-radio').on('click', function (event) {
-            propertySizeFieldsetIndicator.addClass('tb-show').removeClass('tb-hidden');
-        });
+        /*
+        ** Property Size Slider
+        */
 
-        // slider
+        var propertySizeSlider = document.getElementById('property-size-slider');
 
-        var softSlider = document.getElementById('soft');
-
-        noUiSlider.create(softSlider, {
+        noUiSlider.create(propertySizeSlider, {
             start: 50,
-            range: {
-                min: 0,
-                max: 220
-            },
+            range: { min: 0, max: 220 },
             format: wNumb({
                 decimals: 0,
                 edit: function (value) {
-                    if (value < 10) {
+                    if (value < 10) { 
                         return '10';
                     } else if (value >= 200) {
                         return '200+';
@@ -682,25 +615,25 @@
             })
         });
 
-        softSlider.noUiSlider.on('change', function (values, handle) {
+        propertySizeSlider.noUiSlider.on('change', function (values, handle) {
             if ((values[handle] >= 200) || (values[handle] == '200+')) {
-                softSlider.noUiSlider.set(200);
+                propertySizeSlider.noUiSlider.set(200);
             } else if ((values[handle] < 10) || (values[handle] == '10')) {
-                softSlider.noUiSlider.set(10);
+                propertySizeSlider.noUiSlider.set(10);
             }
         });
 
         // var inputFormat = document.getElementById('input-format');
         var propertySizeTarget = document.getElementById('property-size-target');
 
-        softSlider.noUiSlider.on('update', function (values, handle) {
+        propertySizeSlider.noUiSlider.on('update', function (values, handle) {
             // inputFormat.value = values[handle];
             propertySizeTarget.value = values[handle];
             orderForm.selectedPropertySize = values[handle];
         });
 
         $(propertySizeTarget).change(function () {
-            softSlider.noUiSlider.set($(this).val());
+            propertySizeSlider.noUiSlider.set($(this).val());
             orderForm.selectedPropertySize = $(this).val();
         });
 
@@ -886,3 +819,5 @@
         }
     });
 </script>
+
+<?php get_footer('order-form'); ?>
