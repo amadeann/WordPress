@@ -270,7 +270,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // include './email-templates/new-order.php';
 
     // Instantiate the client.
-    $mgClient = new Mailgun('key-203e64e88ec38337f80e72c304a0d784');
+    $mgClient = new Mailgun('');
     $domain = "mg.spicandspan.de";
 
     // Make the call to the client.
